@@ -57,6 +57,7 @@ public class CustomShirtConfiguratorPage extends MenuPage {
         super(driver);
     }
 
+    @Step("create your shirt")
     public void CreateYourShirt() {
         click(StartBtn);
     }
