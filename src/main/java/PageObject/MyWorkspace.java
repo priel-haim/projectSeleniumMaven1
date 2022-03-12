@@ -35,18 +35,6 @@ public class MyWorkspace extends MenuPage {
         click(UpgradeBtn);
     }
 
-//    @Step("")
-//    public void MenuAfterLogin(String name) {
-//        List<WebElement> list = MenuList;
-//        for (WebElement menuList : list) {
-//            if (getText(menuList).equalsIgnoreCase(name)) {
-//                click(menuList);
-//                break;
-//            }
-//        }
-//        sleep(1000);
-//    }
-
     @Step("get upgrade")
     public String GetUpgrade() {
         return getText(Upgrade);
