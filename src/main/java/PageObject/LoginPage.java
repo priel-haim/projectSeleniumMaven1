@@ -16,8 +16,6 @@ public class LoginPage extends MenuPage {
     WebElement passwordField;
     @FindBy(css = ".btn-primary")
     WebElement loginBtn;
-//    @FindBy(css = "#nav-dropdown div")
-//    WebElement login;
     @FindBy(css = ".alert-danger")
     WebElement errorMessage;
     @FindBy(css = "#nav-dropdown>div .flex")
@@ -30,13 +28,13 @@ public class LoginPage extends MenuPage {
         super(driver);
     }
 
-    @Step("")
+    @Step("open your user name")
     public void OpenLogin() {
         click(OpenLoginUpBtn);
         sleep(1000);
     }
 
-    @Step("")
+    @Step("login to the site")
     public void LoginToTheSite(String username, String Password) {
         sleep(200);
         fillText(usernameField, username);
@@ -46,7 +44,7 @@ public class LoginPage extends MenuPage {
         AllureAttachment.attachElementScreenshot(MyLogin);
     }
 
-    @Step("")
+    @Step("show me error message")
     public void LoginToErrorMessage(String username, String Password) {
         sleep(200);
         fillText(usernameField, username);
@@ -56,12 +54,12 @@ public class LoginPage extends MenuPage {
         click(loginBtn);
     }
 
-    @Step("")
+    @Step("Show me an error message")
     public String GetErrorMessage() {
         return getText(errorMessage);
     }
 
-    @Step("")
+    @Step("Confirm my login")
     public String GetMyLogin() {
         return getText(MyLogin);
     }
