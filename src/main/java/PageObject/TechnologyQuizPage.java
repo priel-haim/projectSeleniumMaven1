@@ -82,7 +82,7 @@ public class TechnologyQuizPage extends MenuPage {
         sleep(2000);
     }
 
-    @Step("")
+    @Step("What does the acronym WWW mean?")
     public void WhatDoesWWWMean(String name) {
         List<WebElement> Acronyms = Round4List;
         for (WebElement Round4List : Acronyms) {
@@ -96,7 +96,7 @@ public class TechnologyQuizPage extends MenuPage {
         sleep(2000);
     }
 
-    @Step("")
+    @Step("where to put the MOV Extension?")
     public void WhereToPutTheMOVExtension(String name) {
         List<WebElement> MOV = Round5List;
         for (WebElement Round5List : MOV) {
@@ -110,7 +110,7 @@ public class TechnologyQuizPage extends MenuPage {
         sleep(2000);
     }
 
-    @Step("")
+    @Step("answering the questions")
     public void AnsweringTheQuestions(String inventor, String Shortcut, String number, String Meaning, String Name) {
         WhoFoundedAppleComputer(inventor);
         WhatShortcutsTheOperatingSystem(Shortcut);
@@ -120,7 +120,7 @@ public class TechnologyQuizPage extends MenuPage {
         sleep(1000);
     }
 
-    @Step("")
+    @Step("Get title")
     public String getTitle() {
         return getText(YourFinalScore);
 
