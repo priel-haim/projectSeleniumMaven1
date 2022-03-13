@@ -1,5 +1,6 @@
 package PageObject;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,69 +8,57 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class Templates extends MenuPage {
-	@FindBy(css = ".dataTables_wrapper")
-	private List<WebElement> PageTemplatesBtn;
-	@FindBy(css = ".c-list-header>.e-title")
-	private List<WebElement> TemplateBtn;
-	@FindBy(css = "#template-gallery>tbody>tr>td:nth-child(1)>div")
-	private List<WebElement> TempletesQuiz;
-	@FindBy(css = ".e-button-container>.btn-preview")
-	private WebElement ClickTemplateBtn;
-	@FindBy(css = ".c-thumbnail.gallery-item")
-	private List<WebElement> AllTemplatesQuizList;
-	// Upgrade
-	@FindBy(css = ".nav-link.upgrade")
-	private WebElement UpgradeBtn;
-	// for assert
-	@FindBy(css = "[title='Shopping Order Form']")
-	private WebElement ShoppingOrderForm;
-	@FindBy(css = "[title='Technology Quiz']")
-	private WebElement TechnologyQuiz;
-	@FindBy(css = "[title='Custom Shirt Configurator']")
-	private WebElement CustomShirt;
+    @FindBy(css = ".dataTables_wrapper")
+    private List<WebElement> PageTemplatesBtn;
+    @FindBy(css = ".c-list-header>.e-title")
+    private List<WebElement> TemplateBtn;
+    @FindBy(css = "#template-gallery>tbody>tr>td:nth-child(1)>div")
+    private List<WebElement> TempletesQuiz;
+    @FindBy(css = ".e-button-container>.btn-preview")
+    private WebElement ClickTemplateBtn;
+    @FindBy(css = ".c-thumbnail.gallery-item")
+    private List<WebElement> AllTemplatesQuizList;
+    // Upgrade
+    @FindBy(css = ".nav-link.upgrade")
+    private WebElement UpgradeBtn;
+    // for assert
+    @FindBy(css = "[title='Shopping Order Form']")
+    private WebElement ShoppingOrderForm;
+    @FindBy(css = "[title='Technology Quiz']")
+    private WebElement TechnologyQuiz;
+    @FindBy(css = "[title='Custom Shirt Configurator']")
+    private WebElement CustomShirt;
 
-	public Templates(WebDriver driver) {
-		super(driver);
-	}
+    public Templates(WebDriver driver) {
+        super(driver);
+    }
 
-	public void ChooseTemplate(String name) {
-		List<WebElement> list = AllTemplatesQuizList;
-		for (WebElement AllTemplatesQuizList : list) {
-			if (getText(AllTemplatesQuizList).contains(name)) {
-				click(AllTemplatesQuizList);
-				sleep(2000);
-				break;
-			}
-			sleep(1000);
-		}
-	}
-//
-//	public void IQTestPage() {
-//		click(IQTestBtn);
-//	}
-//
-//	public void TechnologyQuiz() {
-//		click(TechnologyQuizBtn);
-//	}
-//
-//	public void CloseTemplate() {
-//		click(CloseTemplateBtn);
-//	}
+    @Step("choosing the template")
+    public void ChooseTemplate(String name) {
+        List<WebElement> list = AllTemplatesQuizList;
+        for (WebElement AllTemplatesQuizList : list) {
+            if (getText(AllTemplatesQuizList).contains(name)) {
+                click(AllTemplatesQuizList);
+                sleep(2000);
+                break;
+            }
+            sleep(1000);
+        }
+    }
 
-	public void Upgrade() {
-		click(UpgradeBtn);
-	}
+    @Step("to upgrade")
+    public void Upgrade() {
+        click(UpgradeBtn);
+    }
 
-//	public String GetTheTemplate() {
-//		return getText(CustomShirtConfigurator);
-//	}
+    @Step("Get shopping order form")
+    public String GetShoppingOrderForm() {
+        return getText(ShoppingOrderForm);
+    }
 
-	public String GetShoppingOrderForm() {
-		return getText(ShoppingOrderForm);
-	}
-
-	public String GetTechnologyQuiz() {
-		return getText(TechnologyQuiz);
-	}
+    @Step("Get technology quiz")
+    public String GetTechnologyQuiz() {
+        return getText(TechnologyQuiz);
+    }
 
 }
