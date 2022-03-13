@@ -26,10 +26,6 @@ public class TechnologyQuizPage extends MenuPage {
     @FindBy(css = ".e-headline span")
     private WebElement YourFinalScore;
 
-//    // for assert
-//    @FindBy(css = "button:nth-child(5)")
-//    private WebElement AppleComputer;
-
     public TechnologyQuizPage(WebDriver driver) {
         super(driver);
 
