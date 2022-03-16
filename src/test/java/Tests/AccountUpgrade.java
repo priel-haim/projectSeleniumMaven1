@@ -8,9 +8,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AccountUpgrade extends BaseTest {
-    private String[] paymentDetails = {"Haim Navon", "4580-0303-3333-8353", "1226", "333", "ert54v6"};
-    private String[] BillingDetails = {"Haim", "Navon", "PHA", "p-azoulay@gmail.com", "052-2345672", "Rakefet", "15",
-            "99000", "bait shemesh", "IL"};
+//    private String[] paymentDetails = {"Haim Navon", "4580-0303-3333-8353", "1226", "333", "ert54v6"};
+//    private String[] BillingDetails = {"Haim", "Navon", "PHA", "p-azoulay@gmail.com", "052-2345672", "Rakefet", "15",
+//            "99000", "bait shemesh", "IL"};
 
     @Test(description = "Sign in with my name details")
     public void tc01_OpenLogin() {
@@ -43,8 +43,11 @@ public class AccountUpgrade extends BaseTest {
     @Test(description = "The details of the means of payment, and personal details should be stated")
     public void tc04_FillInDetails() {
         YouAreAlmostOnStarter starter = new YouAreAlmostOnStarter(driver);
-        starter.yourPaymentDetails(paymentDetails);
-        starter.yourBillingDetails(BillingDetails);
+        starter.yourPaymentDetails1("Haim Navon", "4580-0303-3333-8353", "1226", "333", "ert54v6");
+        starter.yourBillingDetails1("Haim", "Navon", "PHA", "p-azoulay@gmail.com", "052-2345672", "Rakefet", "15",
+                "99000", "bait shemesh", "IL");
+//        starter.yourPaymentDetails(paymentDetails);
+//        starter.yourBillingDetails(BillingDetails);
         starter.yourOrderSummary();
         String payment = "Your order summary";
         Assert.assertTrue(starter.yourOrderSummaryy().contentEquals(payment));

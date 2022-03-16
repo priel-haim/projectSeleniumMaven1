@@ -70,32 +70,59 @@ public class YouAreAlmostOnStarter extends MenuPage {
         super(driver);
     }
 
+    //
+//    @Step("your payment details")
+//    public void yourPaymentDetails(String[] paymentDetails) {
+//        fillText(NameField, paymentDetails[0]);
+//        // move to frame
+//        driver.switchTo().frame(Frame);
+//        fillText(NumCardField, paymentDetails[1]);
+//        fillText(DateCardField, paymentDetails[2]);
+//        fillText(SecurityNumbersField, paymentDetails[3]);
+//        // move Back the window
+//        driver.switchTo().defaultContent();
+//        fillText(CouponField, paymentDetails[4]);
+//    }
     @Step("your payment details")
-    public void yourPaymentDetails(String[] paymentDetails) {
-        fillText(NameField, paymentDetails[0]);
+    public void yourPaymentDetails1(String Name, String NumCard, String DateCard, String SecurityNumbers, String Coupon) {
+        fillText(NameField, Name);
         // move to frame
         driver.switchTo().frame(Frame);
-        fillText(NumCardField, paymentDetails[1]);
-        fillText(DateCardField, paymentDetails[2]);
-        fillText(SecurityNumbersField, paymentDetails[3]);
-        // move Back the window
+        fillText(NumCardField, NumCard);
+        fillText(DateCardField, DateCard);
+        fillText(SecurityNumbersField, SecurityNumbers);
+        //  move back from frame
         driver.switchTo().defaultContent();
-        fillText(CouponField, paymentDetails[4]);
+        fillText(CouponField, Coupon);
     }
 
     @Step("your billing details")
-    public void yourBillingDetails(String[] BillingDetails) {
-        fillText(firstNameField, BillingDetails[0]);
-        fillText(lastNameField, BillingDetails[1]);
-        fillText(companyField, BillingDetails[2]);
-        fillText(emailField, BillingDetails[3]);
-        fillText(phoneField, BillingDetails[4]);
-        fillText(streetField, BillingDetails[5]);
-        fillText(streetNoField, BillingDetails[6]);
-        fillText(ZIPCodeField, BillingDetails[7]);
-        fillText(cityField, BillingDetails[8]);
-        selectByValue(countryList, BillingDetails[9]);
+    public void yourBillingDetails1(String firstName, String lastName, String company, String email, String phone, String street, String streetNo, String ZIPCode, String city, String country) {
+        fillText(firstNameField, firstName);
+        fillText(lastNameField, lastName);
+        fillText(companyField, company);
+        fillText(emailField, email);
+        fillText(phoneField, phone);
+        fillText(streetField, street);
+        fillText(streetNoField, streetNo);
+        fillText(ZIPCodeField, ZIPCode);
+        fillText(cityField, city);
+        selectByValue(countryList, country);
     }
+
+//    @Step("your billing details")
+//    public void yourBillingDetails(String[] BillingDetails) {
+//        fillText(firstNameField, BillingDetails[0]);
+//        fillText(lastNameField, BillingDetails[1]);
+//        fillText(companyField, BillingDetails[2]);
+//        fillText(emailField, BillingDetails[3]);
+//        fillText(phoneField, BillingDetails[4]);
+//        fillText(streetField, BillingDetails[5]);
+//        fillText(streetNoField, BillingDetails[6]);
+//        fillText(ZIPCodeField, BillingDetails[7]);
+//        fillText(cityField, BillingDetails[8]);
+//        selectByValue(countryList, BillingDetails[9]);
+//    }
 
     @Step("your order summary")
     public void yourOrderSummary() {
