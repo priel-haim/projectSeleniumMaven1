@@ -4,6 +4,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.AllureAttachment;
 
 import java.util.List;
 
@@ -41,6 +42,7 @@ public class TechnologyQuizPage extends MenuPage {
         List<WebElement> computer = Round1List;
         for (WebElement Round1List : computer) {
             if (getText(Round1List).contains(name)) {
+                AllureAttachment.attachElementScreenshot(Round1List);
                 actions.click(Round1List).click(NextBtn).build().perform();
                 break;
             }
@@ -55,6 +57,7 @@ public class TechnologyQuizPage extends MenuPage {
         List<WebElement> OS = Round2List;
         for (WebElement Round2List : OS) {
             if (getText(Round2List).contains(name)) {
+                AllureAttachment.attachElementScreenshot(Round2List);
                 actions.click(Round2List).click(NextBtn).build().perform();
                 break;
             }
@@ -69,6 +72,7 @@ public class TechnologyQuizPage extends MenuPage {
         List<WebElement> LanguagesAreInUse = Round3List;
         for (WebElement Round3List : LanguagesAreInUse) {
             if (getText(Round3List).contains(number)) {
+                AllureAttachment.attachElementScreenshot(Round3List);
                 actions.click(Round3List).click(NextBtn).build().perform();
                 break;
             }
@@ -83,6 +87,7 @@ public class TechnologyQuizPage extends MenuPage {
         List<WebElement> Acronyms = Round4List;
         for (WebElement Round4List : Acronyms) {
             if (getText(Round4List).contains(name)) {
+                AllureAttachment.attachElementScreenshot(Round4List);
                 actions.click(Round4List).click(NextBtn).build().perform();
                 break;
             }
@@ -97,6 +102,7 @@ public class TechnologyQuizPage extends MenuPage {
         List<WebElement> MOV = Round5List;
         for (WebElement Round5List : MOV) {
             if (getText(Round5List).contains(name)) {
+                AllureAttachment.attachElementScreenshot(Round5List);
                 actions.click(Round5List).click(NextBtn).build().perform();
                 break;
             }
@@ -118,6 +124,7 @@ public class TechnologyQuizPage extends MenuPage {
 
     @Step("Get title")
     public String getTitle() {
+        AllureAttachment.attachElementScreenshot(YourFinalScore);
         return getText(YourFinalScore);
 
     }
