@@ -10,17 +10,17 @@ import java.util.List;
 public class MyMenu extends MenuPage {
 
     @FindBy(css = ".fas.fa-caret-down.ml-2")
-    private WebElement yourAccountField;
+    WebElement yourAccountField;
     @FindBy(css = "div>.darken")
-    private WebElement forgetBtn;
+    WebElement forgetBtn;
     @FindBy(css = "[autocomplete='username']")
-    private WebElement forgetPasswordField;
+    WebElement forgetPasswordField;
     @FindBy(css = ".btn.btn-primary")
-    private WebElement messageEmailBtn;
+    WebElement messageEmailBtn;
     @FindBy(css = ".nav-item.dropdown")
-    private WebElement OpenMenulist;
+    WebElement OpenMenulist;
     @FindBy(css = ".dropdown-menu.w-auto.whitespace-no-wrap.absolute.bg-white.shadow-md>li>a")
-    private List<WebElement> Menulist;
+    List<WebElement> Menulist;
 
     public MyMenu(WebDriver driver) {
         super(driver);

@@ -9,62 +9,62 @@ public class YouAreAlmostOnStarter extends MenuPage {
 
     // Your Payment Details
     @FindBy(css = "#card-holder-name")
-    private WebElement NameField;
+    WebElement NameField;
     // Frame
     @FindBy(css = "div iframe")
-    private WebElement Frame;
+    WebElement Frame;
     @FindBy(css = "[name='cardnumber']")
-    private WebElement NumCardField;
+    WebElement NumCardField;
     @FindBy(css = "[name='exp-date']")
-    private WebElement DateCardField;
+    WebElement DateCardField;
     @FindBy(css = "[name='cvc']")
-    private WebElement SecurityNumbersField;
+    WebElement SecurityNumbersField;
     @FindBy(css = "label>#coupon")
-    private WebElement CouponField;
+    WebElement CouponField;
 
     // Your Billing Details
     @FindBy(css = "#first_name")
-    private WebElement firstNameField;
+    WebElement firstNameField;
     @FindBy(css = "#last_name")
-    private WebElement lastNameField;
+    WebElement lastNameField;
     @FindBy(css = "#company")
-    private WebElement companyField;
+    WebElement companyField;
     @FindBy(css = "#email")
-    private WebElement emailField;
+    WebElement emailField;
     @FindBy(css = "#phone")
-    private WebElement phoneField;
+    WebElement phoneField;
     @FindBy(css = "#street")
-    private WebElement streetField;
+    WebElement streetField;
     @FindBy(css = "#street_no")
-    private WebElement streetNoField;
+    WebElement streetNoField;
     @FindBy(css = "#zip")
-    private WebElement ZIPCodeField;
+    WebElement ZIPCodeField;
     @FindBy(css = "#city")
-    private WebElement cityField;
+    WebElement cityField;
     @FindBy(css = "label #country")
-    private WebElement countryList;
+    WebElement countryList;
 
     // I agree to the involve.me
     @FindBy(css = "span>label")
-    private WebElement IagreeBtn;
+    WebElement IagreeBtn;
     @FindBy(css = "div #payment-submit")
-    private WebElement PaymentBtn;
+    WebElement PaymentBtn;
 
-    // where is the your payment details?
-    @FindBy(css = "#payment-form>.justify-content-left>.align-self-center .text-2xl")
-    private WebElement YourPaymentDetails;
+//    // where is the your payment details?
+//    @FindBy(css = "#payment-form>.justify-content-left>.align-self-center .text-2xl")
+//    WebElement YourPaymentDetails;
+//
+//    // where is the your billing details?
+//    @FindBy(css = ".col-md-6>.text-2xl")
+//    WebElement YourBillingDetails;
 
-    // where is the your billing details?
-    @FindBy(css = ".col-md-6>.text-2xl")
-    private WebElement YourBillingDetails;
-
-    // Your order summary
-    @FindBy(css = ".order-summary>h5")
-    private WebElement YourOrderSummary;
+//    // Your order summary
+//    @FindBy(css = ".order-summary>h5")
+//    WebElement YourOrderSummary;
 
     // finish the upgrade
     @FindBy(css = ".order-summary h5")
-    private WebElement orderSummary;
+    WebElement orderSummary;
 
     public YouAreAlmostOnStarter(WebDriver driver) {
         super(driver);

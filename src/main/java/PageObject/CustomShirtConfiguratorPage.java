@@ -10,48 +10,48 @@ import java.util.List;
 public class CustomShirtConfiguratorPage extends MenuPage {
     // Create Your Shirt
     @FindBy(css = ".c-button.btn")
-    private WebElement StartBtn;
+    WebElement StartBtn;
     // Step 1:Choose a Fabric
     @FindBy(css = "[style='font-size: 14px;']")
-    private List<WebElement> ChooseTheColorBtn;
+    List<WebElement> ChooseTheColorBtn;
     // Step 2:Choose The Sleeve
     @FindBy(css = "[style='font-size: 14px;']")
-    private List<WebElement> ClickOnRightSleeveBtn;
+    List<WebElement> ClickOnRightSleeveBtn;
     // Step 3:Choose The Cuff
     @FindBy(css = "[style='font-size: 14px;']")
-    private List<WebElement> ClickYouCuffBtn;
+    List<WebElement> ClickYouCuffBtn;
     // Step 4:Choose the fitting
     @FindBy(css = "[style='font-size: 14px;']")
-    private List<WebElement> ChooseYourGeyserBtn;
+    List<WebElement> ChooseYourGeyserBtn;
     // Step 5:Choose the collar
     @FindBy(css = "[style='font-size: 14px;']")
-    private List<WebElement> ChooseYourChooseBtn;
+    List<WebElement> ChooseYourChooseBtn;
     // Step 6:Choose a size
     @FindBy(css = "span span")
-    private WebElement SearchButtonBtn;
+    WebElement SearchButtonBtn;
     @FindBy(css = ".el-select-dropdown__item>span")
-    private List<WebElement> mySizeBtn;
+    List<WebElement> mySizeBtn;
     // Close the Project
     @FindBy(css = ".c-button-group-button.e-close")
-    private WebElement closeProjectBtn;
+    WebElement closeProjectBtn;
 
     // for assert
     @FindBy(css = "div:nth-child(4)>span")
-    private WebElement ChooseTheColor;
+    WebElement ChooseTheColor;
     @FindBy(css = "div:nth-child(2)>span")
-    private WebElement ClickOnRightSleeve;
+    WebElement ClickOnRightSleeve;
     @FindBy(css = "div:nth-child(2)>span")
-    private WebElement ClickYouCuff;
+    WebElement ClickYouCuff;
     @FindBy(css = "div:nth-child(2)>span")
-    private WebElement ChooseYourFitting;
+    WebElement ChooseYourFitting;
     @FindBy(css = ".v-grid>div:nth-child(1)>span")
-    private WebElement ChooseYourCollar;
+    WebElement ChooseYourCollar;
     @FindBy(css = "ul>li:nth-child(2)>span")
-    private WebElement ChooseSize;
+    WebElement ChooseSize;
     @FindBy(css = ".c-button.btn")
-    private WebElement CreateYourCustomShirt;
+    WebElement CreateYourCustomShirt;
     @FindBy(css = ".e-headline.is-shrinkable span")
-    private WebElement yourShirt;
+    WebElement yourShirt;
 
     public CustomShirtConfiguratorPage(WebDriver driver) {
         super(driver);

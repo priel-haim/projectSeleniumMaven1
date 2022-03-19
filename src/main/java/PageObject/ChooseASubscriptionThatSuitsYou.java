@@ -12,15 +12,15 @@ import java.util.List;
 public class ChooseASubscriptionThatSuitsYou extends MenuPage {
 
 	@FindBy(css = "#pills-monthly-tab")
-	private WebElement MonthlyOrYearlyBtn;
+	WebElement MonthlyOrYearlyBtn;
 	@FindBy(css = "#pills-monthly a>button")
-	private List<WebElement> TheUpgradePriceBtn;
+	List<WebElement> TheUpgradePriceBtn;
 	@FindBy(css = ".e-title")
-	private WebElement suitableSubscription;
+	WebElement suitableSubscription;
 
 	// for assert
 	@FindBy(css = "#pills-monthly div:nth-child(3) a>button")
-	private WebElement typeMonthly;
+	WebElement typeMonthly;
 
 	public ChooseASubscriptionThatSuitsYou(WebDriver driver) {
 		super(driver);

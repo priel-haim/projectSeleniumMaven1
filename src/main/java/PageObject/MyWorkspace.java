@@ -8,17 +8,18 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class MyWorkspace extends MenuPage {
+
     @FindBy(css = ".upgrade")
-    private WebElement UpgradeBtn;
+    WebElement UpgradeBtn;
     @FindBy(css = ".text-lg.text-white")
-    private WebElement StartBtn;
+    WebElement StartBtn;
     @FindBy(css = ".text-sm.flex.items-start>a")
-    private List<WebElement> MenuList;
+    List<WebElement> MenuList;
     // for Assert
     @FindBy(css = ".upgrade")
-    private WebElement Upgrade;
+    WebElement Upgrade;
     @FindBy(css = ".rounded.bg-teal-500")
-    private WebElement start;
+    WebElement start;
 
 
     public MyWorkspace(WebDriver driver) {

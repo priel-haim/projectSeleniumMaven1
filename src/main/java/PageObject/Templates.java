@@ -8,26 +8,19 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class Templates extends MenuPage {
-    @FindBy(css = ".dataTables_wrapper")
-    private List<WebElement> PageTemplatesBtn;
-    @FindBy(css = ".c-list-header>.e-title")
-    private List<WebElement> TemplateBtn;
-    @FindBy(css = "#template-gallery>tbody>tr>td:nth-child(1)>div")
-    private List<WebElement> TempletesQuiz;
-    @FindBy(css = ".e-button-container>.btn-preview")
-    private WebElement ClickTemplateBtn;
+
     @FindBy(css = ".c-thumbnail.gallery-item")
-    private List<WebElement> AllTemplatesQuizList;
+    List<WebElement> AllTemplatesQuizList;
+
     // Upgrade
     @FindBy(css = ".nav-link.upgrade")
-    private WebElement UpgradeBtn;
+     WebElement UpgradeBtn;
+
     // for assert
     @FindBy(css = "[title='Shopping Order Form']")
-    private WebElement ShoppingOrderForm;
+    WebElement ShoppingOrderForm;
     @FindBy(css = "[title='Technology Quiz']")
-    private WebElement TechnologyQuiz;
-    @FindBy(css = "[title='Custom Shirt Configurator']")
-    private WebElement CustomShirt;
+    WebElement TechnologyQuiz;
 
     public Templates(WebDriver driver) {
         super(driver);

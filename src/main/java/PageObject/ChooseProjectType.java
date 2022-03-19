@@ -11,13 +11,13 @@ public class ChooseProjectType extends MenuPage {
 
     //choose project
     @FindBy(css = "#app-layout>.container>div:nth-child(3)>div>a>div>.title")
-    private List<WebElement> TemplateTitleType;
+    List<WebElement> TemplateTitleType;
 
     //for assert
     @FindBy(css = "div>div:nth-child(3) a:nth-child(1) div.title")
-    private WebElement Quiz;
+    WebElement Quiz;
     @FindBy(css = ".container>div:nth-child(3) a:nth-child(5) .title")
-    private WebElement PaymentForm;
+    WebElement PaymentForm;
 
     public ChooseProjectType(WebDriver driver) {
         super(driver);
