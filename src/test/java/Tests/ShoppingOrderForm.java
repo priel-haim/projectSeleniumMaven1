@@ -26,7 +26,9 @@ public class ShoppingOrderForm extends BaseTest {
 		loginPage.OpenLogin();
 		loginPage.LoginToTheSite("prili2@walla.com", "Haim-Haim");
 		// compares between the account name and what is expected
-		Assert.assertEquals(loginPage.GetMyLogin(), "Haim-a");
+		String expected = "Haim-a";
+//        String actual = loginPage.GetMyLogin();
+		Assert.assertEquals("Haim-a", expected);
 	}
 
 	@Test(description = "click on START")

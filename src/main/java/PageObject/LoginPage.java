@@ -18,7 +18,7 @@ public class LoginPage extends MenuPage {
     WebElement loginBtn;
     @FindBy(css = ".alert-danger")
     WebElement errorMessage;
-    @FindBy(css = "#nav-dropdown>div .flex")
+    @FindBy(css = "#nav-dropdown .flex")
     WebElement MyLogin;
     @FindBy(css = ".auth-panel")
     WebElement finalErrorMessage;
@@ -59,8 +59,8 @@ public class LoginPage extends MenuPage {
         return getText(errorMessage);
     }
 
-    @Step("Confirm my login")
-    public String GetMyLogin() {
-        return getText(MyLogin);
-    }
+//    @Step("Confirm my login")
+//    public String GetMyLogin() {
+//        return getText(MyLogin);
+//    }
 }

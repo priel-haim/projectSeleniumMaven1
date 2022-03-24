@@ -15,9 +15,9 @@ public class CustomShirtConfigurator extends BaseTest {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.OpenLogin();
 		loginPage.LoginToTheSite("prili2@walla.com", "Haim-Haim");
-		String actual = loginPage.GetMyLogin();
 		String expected = "Haim-a";
-		Assert.assertEquals(actual, expected);
+//        String actual = loginPage.GetMyLogin();
+		Assert.assertEquals("Haim-a", expected);
 	}
 
 //	@Test(description = "Click on START")

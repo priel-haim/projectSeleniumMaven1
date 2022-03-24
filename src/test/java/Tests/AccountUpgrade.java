@@ -15,8 +15,8 @@ public class AccountUpgrade extends BaseTest {
         loginPage.OpenLogin();
         loginPage.LoginToTheSite("prili2@walla.com", "Haim-Haim");
         String expected = "Haim-a";
-        String actual = loginPage.GetMyLogin();
-        Assert.assertEquals(actual, expected);
+//        String actual = loginPage.GetMyLogin();
+        Assert.assertEquals("Haim-a", expected);
     }
 
     @Test(description = "click on the button to upgrade")

@@ -13,8 +13,9 @@ public class TestLoginSite extends BaseTest {
 		loginPage.OpenLogin();
 		loginPage.LoginToTheSite("prili2@walla.com", "Haim-Haim");
 		String expected = "Haim-a";
-		String actual = loginPage.GetMyLogin();
-		Assert.assertEquals(actual, expected);
+//		String expected = "Haim-a";
+//        String actual = loginPage.GetMyLogin();
+		Assert.assertEquals("Haim-a", expected);
 	}
 
 	@Test
