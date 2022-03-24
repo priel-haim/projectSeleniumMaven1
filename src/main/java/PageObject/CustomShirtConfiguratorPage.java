@@ -63,11 +63,11 @@ public class CustomShirtConfiguratorPage extends MenuPage {
     }
 
     @Step("You need to choose the right fabric")
-    public void ChooseFabric(String name) {
+    public void ChooseFabric(String fabric) {
         sleep(200);
         List<WebElement> MyColor = ChooseTheColorBtn;
         for (WebElement ChooseTheColorBtn : MyColor) {
-            if (getText(ChooseTheColorBtn).contains(name)) {
+            if (getText(ChooseTheColorBtn).contains(fabric)) {
                 click(ChooseTheColorBtn);
                 break;
             }
@@ -155,8 +155,17 @@ public class CustomShirtConfiguratorPage extends MenuPage {
         ChooseTheFitting(type[3]);
         ChooseTheCollar(type[4]);
         TheSizeOfTheShirt(type[5]);
-
     }
+
+//    public void italianShirt1(String fabric, String sleeve, String cuff, String fitting, String collar, String size){
+//        click(CreateYourShirt(StartBtn));
+//        click(ChooseFabric(ChooseTheColor, fabric));
+//        click(ChooseTheSleeve(ClickOnRightSleeveBtn, sleeve));
+//        click(ChooseTheCuff(ClickYouCuffBtn, cuff));
+//        click(ChooseTheFitting(ChooseYourGeyserBtn, fitting));
+//        click(ChooseTheCollar(ChooseYourChooseBtn, collar));
+//        click(TheSizeOfTheShirt(mySizeBtn, size));
+//    }
 
     @Step("your ShirtIs Ready")
     public String yourShirtIsReady() {

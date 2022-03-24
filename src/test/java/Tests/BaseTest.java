@@ -9,12 +9,10 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import java.io.IOException;
 import java.time.Duration;
 
 
@@ -56,9 +54,9 @@ public class BaseTest {
 
     }
 
-    @AfterClass
-    public void tearDown() throws IOException {
-        Runtime.getRuntime().exec("taskkill /F /IM ChromeDriver.exe");
-        driver.quit();
-    }
+//    @AfterClass
+//    public void tearDown() throws IOException {
+//        Runtime.getRuntime().exec("taskkill /F /IM ChromeDriver.exe");
+//        driver.quit();
+//    }
 }
