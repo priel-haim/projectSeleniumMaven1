@@ -10,17 +10,32 @@ import java.util.List;
 public class ChooseProjectType extends MenuPage {
 
     //choose project
-    @FindBy(css = "#app-layout>.container>div:nth-child(3)>div>a>div>.title")
+    @FindBy(css = "#app .flex>div:nth-child(3) div>a")
+    List<WebElement> ListMain;
+    @FindBy(css = "div:nth-child(1)>.divide-gray-100 .text-gray-700")
     List<WebElement> TemplateTitleType;
 
     //for assert
     @FindBy(css = "div>div:nth-child(3) a:nth-child(1) div.title")
     WebElement Quiz;
-    @FindBy(css = ".container>div:nth-child(3) a:nth-child(5) .title")
+    @FindBy(css = "div:nth-child(1)>div>div:nth-child(3)>button>div.text-gray-700")
     WebElement PaymentForm;
 
     public ChooseProjectType(WebDriver driver) {
         super(driver);
+    }
+
+    @Step("")
+    public void ChooseFromListMain(String name){
+        List<WebElement> list = ListMain;
+        for (WebElement ListMain : list) {
+            if(getText(ListMain).contains(name)){
+                click(ListMain);
+                break;
+            }
+
+        }
+
     }
 
     @Step("choosing template type")

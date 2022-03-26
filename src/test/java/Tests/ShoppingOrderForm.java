@@ -1,14 +1,8 @@
 package Tests;
 
+import PageObject.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import PageObject.ChooseProjectType;
-import PageObject.LoginPage;
-import PageObject.MenuPage;
-import PageObject.MyWorkspace;
-import PageObject.ShoppingOrderFormPage;
-import PageObject.Templates;
 
 public class ShoppingOrderForm extends BaseTest {
 	private String firstName = "haim";
@@ -31,20 +25,21 @@ public class ShoppingOrderForm extends BaseTest {
 		Assert.assertEquals("Haim-a", expected);
 	}
 
-	@Test(description = "click on START")
+	@Test(description = "Select a title from the main menu")
 	public void tc02_startToProject() {
-		MyWorkspace workspace = new MyWorkspace(driver);
-		String Start = workspace.GetStart();
-		workspace.StartProject();
-		Assert.assertEquals(Start, "Start");
+		ChooseProjectType projectType = new ChooseProjectType(driver);
+		projectType.ChooseFromListMain("Templates");
+//		MyWorkspace workspace = new MyWorkspace(driver);
+//		String Start = workspace.GetStart();
+//		workspace.StartProject();
+//		Assert.assertEquals(Start, "Templates");
 	}
 
 	@Test(description = "Select the template type")
 	public void tc03_openingPaymentFormPage() {
 		ChooseProjectType choosePro = new ChooseProjectType(driver);
-		String TypeTemplate = choosePro.PaymentFormTypeProject();
-		choosePro.ChooseProject("Payment Form");
-		Assert.assertEquals("Payment Form", TypeTemplate);
+		choosePro.ChooseProject("Payment form");
+		Assert.assertEquals("Payment form", choosePro.PaymentFormTypeProject());
 	}
 
 	@Test(description = "my type project")

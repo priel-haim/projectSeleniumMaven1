@@ -9,8 +9,10 @@ import java.util.List;
 
 public class Templates extends MenuPage {
 
-    @FindBy(css = ".c-thumbnail.gallery-item")
+    @FindBy(css = ".lg\\:col-span-8>div:nth-child(2) > div > div")
     List<WebElement> AllTemplatesQuizList;
+    @FindBy(css = "div:nth-child(2) div:nth-child(8) a:nth-child(1)")
+    WebElement Preview;
 
     // Upgrade
     @FindBy(css = ".nav-link.upgrade")
@@ -31,7 +33,7 @@ public class Templates extends MenuPage {
         List<WebElement> list = AllTemplatesQuizList;
         for (WebElement AllTemplatesQuizList : list) {
             if (getText(AllTemplatesQuizList).contains(name)) {
-                click(AllTemplatesQuizList);
+                click(Preview);
                 sleep(2000);
                 break;
             }
