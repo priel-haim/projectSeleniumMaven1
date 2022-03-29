@@ -1,6 +1,5 @@
 package PageObject;
 
-import java.util.NoSuchElementException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +8,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.NoSuchElementException;
 
 public class BasePage {
 	WebDriver driver;
@@ -47,6 +48,10 @@ public class BasePage {
 			t.printStackTrace();
 		}
 	}
+	public void hover(WebElement el) {
+		actions.moveToElement(el).build().perform();
+	}
+
 
 	protected void selectByValue(WebElement webelement, String value) {
 		Select select = new Select(webelement);
