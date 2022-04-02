@@ -40,9 +40,4 @@ public class MyWorkspace extends MenuPage {
     public String GetUpgrade() {
         return getText(Upgrade);
     }
-
-    @Step("get to start")
-    public String GetStart() {
-        return getText(start);
-    }
 }

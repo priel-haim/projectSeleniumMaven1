@@ -49,20 +49,6 @@ public class YouAreAlmostOnStarter extends MenuPage {
     WebElement IagreeBtn;
     @FindBy(css = "div #payment-submit")
     WebElement PaymentBtn;
-
-//    // where is the your payment details?
-//    @FindBy(css = "#payment-form>.justify-content-left>.align-self-center .text-2xl")
-//    WebElement YourPaymentDetails;
-//
-//    // where is the your billing details?
-//    @FindBy(css = ".col-md-6>.text-2xl")
-//    WebElement YourBillingDetails;
-
-//    // Your order summary
-//    @FindBy(css = ".order-summary>h5")
-//    WebElement YourOrderSummary;
-
-    // finish the upgrade
     @FindBy(css = ".order-summary h5")
     WebElement orderSummary;
 

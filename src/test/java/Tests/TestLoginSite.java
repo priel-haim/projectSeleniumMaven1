@@ -7,18 +7,17 @@ import PageObject.LoginPage;
 import PageObject.MyMenu;
 
 public class TestLoginSite extends BaseTest {
-	@Test
+
+	@Test(description = " open my login")
 	public void tc01_LoginSite() {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.OpenLogin();
 		loginPage.LoginToTheSite("prili2@walla.com", "Haim-Haim");
 		String expected = "Haim-a";
-//		String expected = "Haim-a";
-//        String actual = loginPage.GetMyLogin();
 		Assert.assertEquals("Haim-a", expected);
 	}
 
-	@Test
+	@Test(description = "Check if there is a possibility from the user")
 	public void tc02_SignOut() {
 		MyMenu yourMenu = new MyMenu(driver);
 		yourMenu.UserMenu("Log Out");
@@ -27,8 +26,8 @@ public class TestLoginSite extends BaseTest {
 		Assert.assertTrue(driver.getTitle() != condition1);
 	}
 
-	@Test
-	public void tc03_ForgetMyPassworf() {
+	@Test(description = "If it is possible to change the user password")
+	public void tc03_ForgetMyPassword() {
 		MyMenu yourMenu = new MyMenu(driver);
 		yourMenu.ForgetPassword("prili2@walla.com");
 		String condition1 = "Forgot password";

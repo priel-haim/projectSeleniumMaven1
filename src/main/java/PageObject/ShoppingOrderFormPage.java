@@ -56,45 +56,8 @@ public class ShoppingOrderFormPage extends MenuPage {
     // Search My Country
     @FindBy(css = ".el-select-dropdown__wrap>ul>li span")
     List<WebElement> MyCountryList;
-
-    // for Assert
-    // click to start
-    @FindBy(css = ".c-button.btn")
-    WebElement ShopNow;
-    // Choose Your Favorite Look
-    @FindBy(css = "div:nth-child(4)>.c-image-answer-title")
-    WebElement YuorShort;
-    // Choose your size
-    @FindBy(css = "li:nth-child(3)>span")
-    WebElement YourSize;
-    @FindBy(css = "label>span")
-    WebElement FirstName;
-    // What your name and last name adn your email?
-    @FindBy(css = ".input-label.lastName-label>input")
-    WebElement LastName;
-    @FindBy(css = "/html/body/div[1]/div/div/div[3]/div/div/div[3]/div/div[3]/div/form/div/label/span")
-    WebElement Email;
-    // which shipping method would you prefer?
-    @FindBy(css = "button:nth-child(4)")
-    WebElement ShippingMethod;
-    // Where to send the garment?
-    @FindBy(css = ".e-headline span")
-    WebElement ShippingAddress;
-    @FindBy(css = "div:nth-child(1)>label>span")
-    WebElement StreetAddress;
-    @FindBy(css = "form>div:nth-child(2)>label>span")
-    WebElement PostalCode;
-    @FindBy(css = "div:nth-child(3)>label>span")
-    WebElement City;
-    @FindBy(css = "div:nth-child(4)>label>span")
-    WebElement State;
-    @FindBy(css = "div:nth-child(5)>div>label")
-    WebElement Country;
     @FindBy(css = ".e-headline span")
     WebElement finalTile;
-    //
-//    @FindBy(css = ".e-headline span")
-//    WebElement CheckingTheOrder;
 
     public ShoppingOrderFormPage(WebDriver driver) {
         super(driver);
@@ -109,7 +72,6 @@ public class ShoppingOrderFormPage extends MenuPage {
 
     @Step("what is Your Favorite Look?")
     public void PickYourFavoriteLook(String styleName) {
-        // List<WebElement> style = StyleBtn;
         for (WebElement StyleBtn : StyleBtns) {
             if (getText(StyleBtn).contains(styleName)) {
                 click(StyleBtn);
@@ -134,8 +96,8 @@ public class ShoppingOrderFormPage extends MenuPage {
     }
 
     @Step("what is your first name?")
-    public void FirstName(String fname) {
-        fillText(FnameField, fname);
+    public void FirstName(String frame) {
+        fillText(FnameField, frame);
         sleep(500);
         click(ContinueBtn);
     }

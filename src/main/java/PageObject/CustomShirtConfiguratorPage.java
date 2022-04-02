@@ -146,7 +146,7 @@ public class CustomShirtConfiguratorPage extends MenuPage {
         sleep(2000);
     }
 
-    @Step("chooce your italian shirt")
+    @Step("choose your italian shirt")
     public void italianShirt(String[] type) {
         CreateYourShirt();
         ChooseFabric(type[0]);
@@ -156,16 +156,6 @@ public class CustomShirtConfiguratorPage extends MenuPage {
         ChooseTheCollar(type[4]);
         TheSizeOfTheShirt(type[5]);
     }
-
-//    public void italianShirt1(String fabric, String sleeve, String cuff, String fitting, String collar, String size){
-//        click(CreateYourShirt(StartBtn));
-//        click(ChooseFabric(ChooseTheColor, fabric));
-//        click(ChooseTheSleeve(ClickOnRightSleeveBtn, sleeve));
-//        click(ChooseTheCuff(ClickYouCuffBtn, cuff));
-//        click(ChooseTheFitting(ChooseYourGeyserBtn, fitting));
-//        click(ChooseTheCollar(ChooseYourChooseBtn, collar));
-//        click(TheSizeOfTheShirt(mySizeBtn, size));
-//    }
 
     @Step("your ShirtIs Ready")
     public String yourShirtIsReady() {

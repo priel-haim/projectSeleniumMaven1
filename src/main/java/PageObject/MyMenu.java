@@ -9,7 +9,7 @@ import java.util.List;
 
 public class MyMenu extends MenuPage {
 
-    @FindBy(css = ".fas.fa-caret-down.ml-2")
+    @FindBy(css = "#nav-dropdown [focusable='false']") //.fas.fa-caret-down.ml-2
     WebElement yourAccountField;
     @FindBy(css = "div>.darken")
     WebElement forgetBtn;
@@ -19,18 +19,21 @@ public class MyMenu extends MenuPage {
     WebElement messageEmailBtn;
     @FindBy(css = ".nav-item.dropdown")
     WebElement OpenMenulist;
-    @FindBy(css = ".dropdown-menu.w-auto.whitespace-no-wrap.absolute.bg-white.shadow-md>li>a")
-    List<WebElement> Menulist;
+    @FindBy(css = ".md\\:items-center .items-center div ul li")
+    List<WebElement> MenuList;
+    @FindBy(css = ".items-center.text-sm>a:nth-child(2)")
+    WebElement GetmyTemplate;
+
 
     public MyMenu(WebDriver driver) {
         super(driver);
     }
 
-    @Step("user menu")
+    @Step("Button and selection in the My Username menu")
     public void UserMenu(String name) {
         click(yourAccountField);
         sleep(2000);
-        List<WebElement> list = Menulist;
+        List<WebElement> list = MenuList;
         for (WebElement menuList : list) {
             if (getText(menuList).equalsIgnoreCase(name)) {
                 click(menuList);
@@ -49,4 +52,8 @@ public class MyMenu extends MenuPage {
         click(messageEmailBtn); // message to Email
     }
 
+    @Step("my template")
+    public String GetMyTemplate(){
+        return getText(GetmyTemplate);
+    }
 }

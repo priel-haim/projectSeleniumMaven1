@@ -15,7 +15,7 @@ public class AccountUpgrade extends BaseTest {
         loginPage.OpenLogin();
         loginPage.LoginToTheSite("prili2@walla.com", "Haim-Haim");
         String expected = "Haim-a";
-//        String actual = loginPage.GetMyLogin();
+        String actual = loginPage.GetMyLogin();
         Assert.assertEquals("Haim-a", expected);
     }
 
@@ -47,5 +47,4 @@ public class AccountUpgrade extends BaseTest {
         String payment = "Your order summary";
         Assert.assertTrue(starter.yourOrderSummaryy().contentEquals(payment));
     }
-
 }

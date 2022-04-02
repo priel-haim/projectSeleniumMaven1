@@ -1,14 +1,8 @@
 package Tests;
 
+import PageObject.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import PageObject.ChooseProjectType;
-import PageObject.LoginPage;
-import PageObject.MenuPage;
-import PageObject.MyWorkspace;
-import PageObject.TechnologyQuizPage;
-import PageObject.Templates;
 
 public class RunningSoftware extends BaseTest {
 
@@ -27,10 +21,11 @@ public class RunningSoftware extends BaseTest {
 
 	@Test(description = "Click On The Start")
 	public void tc02_TestingCalculationSoftware() {
-		MyWorkspace workspace = new MyWorkspace(driver);
-		String expected = workspace.GetStart();
-		workspace.StartProject();
-		Assert.assertEquals("Start", expected);
+		ChooseProjectType projectType = new ChooseProjectType(driver);
+		projectType.ChooseFromListMain("Templates");
+		MyMenu menu = new MyMenu(driver);
+		String myMenu = menu.GetMyTemplate();
+		Assert.assertEquals("Templates", myMenu);
 	}
 
 	@Test(description = "Select the quiz template")
@@ -44,9 +39,9 @@ public class RunningSoftware extends BaseTest {
 	@Test(description = "Choosing the project I will work on")
 	public void tc04_ChooseTemplateOfQuiz() {
 		Templates templates = new Templates(driver);
-		String typeTemplate = templates.GetTechnologyQuiz();
 		templates.ChooseTemplate("Technology Quiz");
-		Assert.assertEquals(typeTemplate, "Technology Quiz");
+		String typeTemplate = templates.GetTechnologyQuiz();
+		Assert.assertEquals(typeTemplate, "How well do you know tech?");
 	}
 
 	@Test(description = "The questions need to be answered")

@@ -17,7 +17,7 @@ public class TestUserAndPassword extends BaseTest{
 		Assert.assertEquals(login, "These credentials do not match our records.");
 	}
 
-	@Test(dataProvider ="getData", description="use incorect login information")
+	@Test(dataProvider ="getData", description="use incorrect login information")
 	public void tc02_OpenLogin2(String username, String password) {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.LoginToErrorMessage(username, password);

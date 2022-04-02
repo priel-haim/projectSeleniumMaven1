@@ -29,10 +29,9 @@ public class ShoppingOrderForm extends BaseTest {
 	public void tc02_startToProject() {
 		ChooseProjectType projectType = new ChooseProjectType(driver);
 		projectType.ChooseFromListMain("Templates");
-//		MyWorkspace workspace = new MyWorkspace(driver);
-//		String Start = workspace.GetStart();
-//		workspace.StartProject();
-//		Assert.assertEquals(Start, "Templates");
+		MyMenu menu = new MyMenu(driver);
+		String myMenu = menu.GetMyTemplate();
+		Assert.assertEquals("Templates", myMenu);
 	}
 
 	@Test(description = "Select the template type")
@@ -45,9 +44,9 @@ public class ShoppingOrderForm extends BaseTest {
 	@Test(description = "my type project")
 	public void tc04_chooseTypeProject() {
 		Templates template = new Templates(driver);
-		String Shopping = template.GetShoppingOrderForm();
 		template.ChooseTemplate("Shopping Order Form");
-		Assert.assertEquals(Shopping, "Shopping Order Form");
+		String Shopping = template.GetShoppingOrderForm();
+		Assert.assertEquals(Shopping, "Style,\nyour way.");
 	}
 
 	@Test(description = "Test Pay order form template")

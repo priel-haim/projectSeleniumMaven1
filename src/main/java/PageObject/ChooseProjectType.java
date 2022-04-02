@@ -16,7 +16,7 @@ public class ChooseProjectType extends MenuPage {
     List<WebElement> TemplateTitleType;
 
     //for assert
-    @FindBy(css = "div>div:nth-child(3) a:nth-child(1) div.title")
+    @FindBy(css = "div:nth-child(1)>div>div:nth-child(1)>button>div.text-gray-700")
     WebElement Quiz;
     @FindBy(css = "div:nth-child(1)>div>div:nth-child(3)>button>div.text-gray-700")
     WebElement PaymentForm;
@@ -25,7 +25,7 @@ public class ChooseProjectType extends MenuPage {
         super(driver);
     }
 
-    @Step("")
+    @Step("Make-up to choose from the menu list")
     public void ChooseFromListMain(String name){
         List<WebElement> list = ListMain;
         for (WebElement ListMain : list) {
@@ -33,9 +33,7 @@ public class ChooseProjectType extends MenuPage {
                 click(ListMain);
                 break;
             }
-
         }
-
     }
 
     @Step("choosing template type")
@@ -60,5 +58,4 @@ public class ChooseProjectType extends MenuPage {
     public String PaymentFormTypeProject() {
         return getText(PaymentForm);
     }
-
 }

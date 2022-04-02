@@ -12,15 +12,15 @@ public class TechnologyQuizPage extends MenuPage {
 
     @FindBy(css = ".c-button.btn")
     WebElement StartBtn;
-    @FindBy(css = ".btn-secondary.shadow")
+    @FindBy(css = ".v-grid-1 button>div>div")
     List<WebElement> Round1List;
-    @FindBy(css = ".btn-secondary.shadow")
+    @FindBy(css = ".v-grid-1 button>div>div")
     List<WebElement> Round2List;
-    @FindBy(css = ".answer-behaviour.shadow")
+    @FindBy(css = ".v-grid-1 button>div>div")
     List<WebElement> Round3List;
-    @FindBy(css = ".btn-secondary.shadow")
+    @FindBy(css = ".v-grid-1 button>div>div")
     List<WebElement> Round4List;
-    @FindBy(css = ".answer-behaviour.shadow")
+    @FindBy(css = ".v-grid-1 button>div>div")
     List<WebElement> Round5List;
     @FindBy(css = ".c-button.btn")
     WebElement NextBtn;

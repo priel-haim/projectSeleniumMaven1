@@ -59,8 +59,8 @@ public class LoginPage extends MenuPage {
         return getText(errorMessage);
     }
 
-//    @Step("Confirm my login")
-//    public String GetMyLogin() {
-//        return getText(MyLogin);
-//    }
+    @Step("Confirm my login")
+    public String GetMyLogin() {
+        return getText(MyLogin);
+    }
 }
