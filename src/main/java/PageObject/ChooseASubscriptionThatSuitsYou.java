@@ -11,50 +11,55 @@ import java.util.List;
 
 public class ChooseASubscriptionThatSuitsYou extends MenuPage {
 
-	@FindBy(css = "#pills-monthly-tab")
-	WebElement MonthlyOrYearlyBtn;
-	@FindBy(css = "#pills-monthly a>button")
-	List<WebElement> TheUpgradePriceBtn;
-	@FindBy(css = ".e-title")
-	WebElement suitableSubscription;
+    // button to change to month or year
+    @FindBy(css = "#pills-monthly-tab")
+    WebElement MonthlyOrYearlyBtn;
 
-	// for assert
-	@FindBy(css = "#pills-monthly div:nth-child(3) a>button")
-	WebElement typeMonthly;
+    // The Upgrade Price
+    @FindBy(css = "#pills-monthly a>button")
+    List<WebElement> TheUpgradePriceBtn;
 
-	public ChooseASubscriptionThatSuitsYou(WebDriver driver) {
-		super(driver);
-	}
+    // choose suitable Subscription
+    @FindBy(css = ".e-title")
+    WebElement suitableSubscription;
 
-	@Step("Choose a subscription type in months or years")
-	public void chooseMonthlyOrYearly(String TypeContract) {
-		AllureAttachment.attachElementScreenshot(MonthlyOrYearlyBtn);
-		click(MonthlyOrYearlyBtn);
-	}
+    // for assert
+    @FindBy(css = "#pills-monthly div:nth-child(3) a>button")
+    WebElement typeMonthly;
 
-	@Step("What type of subscription do you want?")
-	public void typeUpgrade(String upgrade) {
-		List<WebElement> list = TheUpgradePriceBtn;
-		for (WebElement TheUpgradePriceBtn : list) {
-			if (getText(TheUpgradePriceBtn).contains(upgrade)) {
-				sleep(500);
-				AllureAttachment.attachElementScreenshot(TheUpgradePriceBtn);
-				click(TheUpgradePriceBtn);
-				break;
-			}
-			sleep(1000);
-		}
-		sleep(2000);
-	}
+    public ChooseASubscriptionThatSuitsYou(WebDriver driver) {
+        super(driver);
+    }
 
-	@Step("Choose Suitable Subscription")
-	public String GetChooseSuitableSubscription() {
-		return getText(suitableSubscription);
-	}
+    @Step("Choose a subscription type in months or years")
+    public void chooseMonthlyOrYearly(String TypeContract) {
+        AllureAttachment.attachElementScreenshot(MonthlyOrYearlyBtn);
+        click(MonthlyOrYearlyBtn);
+    }
 
-	@Step("Choose Type Upgrade")
-	public String GetChooseTypeUpgrade() {
-		wait.until(ExpectedConditions.visibilityOf(typeMonthly));
-		return getText(typeMonthly);
-	}
+    @Step("What type of subscription do you want?")
+    public void typeUpgrade(String upgrade) {
+        List<WebElement> list = TheUpgradePriceBtn;
+        for (WebElement TheUpgradePriceBtn : list) {
+            if (getText(TheUpgradePriceBtn).contains(upgrade)) {
+                sleep(500);
+                AllureAttachment.attachElementScreenshot(TheUpgradePriceBtn);
+                click(TheUpgradePriceBtn);
+                break;
+            }
+            sleep(1000);
+        }
+        sleep(2000);
+    }
+
+    @Step("Choose Suitable Subscription")
+    public String GetChooseSuitableSubscription() {
+        return getText(suitableSubscription);
+    }
+
+    @Step("Choose Type Upgrade")
+    public String GetChooseTypeUpgrade() {
+        wait.until(ExpectedConditions.visibilityOf(typeMonthly));
+        return getText(typeMonthly);
+    }
 }

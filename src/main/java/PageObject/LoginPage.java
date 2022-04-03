@@ -7,15 +7,24 @@ import org.openqa.selenium.support.FindBy;
 import utilities.AllureAttachment;
 
 public class LoginPage extends MenuPage {
-    // open the size involve.me
+
+    // open my login
     @FindBy(css = ".other-link.login")
     WebElement OpenLoginUpBtn;
+
+    // Write down the correct username
     @FindBy(css = "[autocomplete='username']")
     WebElement usernameField;
+
+    // Write down the correct password
     @FindBy(css = "[name='password']")
     WebElement passwordField;
+
+    // push the button to open my user
     @FindBy(css = ".btn-primary")
     WebElement loginBtn;
+
+    // error message
     @FindBy(css = ".alert-danger")
     WebElement errorMessage;
     @FindBy(css = "#nav-dropdown .flex")

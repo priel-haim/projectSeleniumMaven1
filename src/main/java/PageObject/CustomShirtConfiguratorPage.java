@@ -8,29 +8,37 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class CustomShirtConfiguratorPage extends MenuPage {
+
     // Create Your Shirt
     @FindBy(css = ".c-button.btn")
     WebElement StartBtn;
+
     // Step 1:Choose a Fabric
     @FindBy(css = "[style='font-size: 14px;']")
     List<WebElement> ChooseTheColorBtn;
+
     // Step 2:Choose The Sleeve
     @FindBy(css = "[style='font-size: 14px;']")
     List<WebElement> ClickOnRightSleeveBtn;
+
     // Step 3:Choose The Cuff
     @FindBy(css = "[style='font-size: 14px;']")
     List<WebElement> ClickYouCuffBtn;
+
     // Step 4:Choose the fitting
     @FindBy(css = "[style='font-size: 14px;']")
     List<WebElement> ChooseYourGeyserBtn;
+
     // Step 5:Choose the collar
     @FindBy(css = "[style='font-size: 14px;']")
     List<WebElement> ChooseYourChooseBtn;
+
     // Step 6:Choose a size
     @FindBy(css = "span span")
     WebElement SearchButtonBtn;
     @FindBy(css = ".el-select-dropdown__item>span")
     List<WebElement> mySizeBtn;
+
     // Close the Project
     @FindBy(css = ".c-button-group-button.e-close")
     WebElement closeProjectBtn;
