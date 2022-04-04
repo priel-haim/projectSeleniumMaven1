@@ -64,14 +64,14 @@ public class ShoppingOrderFormPage extends MenuPage {
     }
 
     @Step("Style your way")
-    public void StyleYourWay() {
+    public void styleYourWay() {
         sleep(1000);
         click(ShopNowBtn);
         sleep(2000);
     }
 
     @Step("what is Your Favorite Look?")
-    public void PickYourFavoriteLook(String styleName) {
+    public void pickYourFavoriteLook(String styleName) {
         for (WebElement StyleBtn : StyleBtns) {
             if (getText(StyleBtn).contains(styleName)) {
                 click(StyleBtn);
@@ -82,7 +82,7 @@ public class ShoppingOrderFormPage extends MenuPage {
     }
 
     @Step("what is your size?")
-    public void YourSize(String value) {
+    public void yourSize(String value) {
         click(OpenYourSizeBtn);
         List<WebElement> size = YourSizeList;
         for (WebElement YourSizeList : size) {
@@ -96,14 +96,14 @@ public class ShoppingOrderFormPage extends MenuPage {
     }
 
     @Step("what is your first name?")
-    public void FirstName(String frame) {
+    public void firstName(String frame) {
         fillText(FnameField, frame);
         sleep(500);
         click(ContinueBtn);
     }
 
     @Step("what is your last name and your email?")
-    public void LastNameAndEmail(String lname, String email) {
+    public void lastNameAndEmail(String lname, String email) {
         fillText(LnameField, lname);
         sleep(2000);
         fillText(EmailField, email);
@@ -112,7 +112,7 @@ public class ShoppingOrderFormPage extends MenuPage {
     }
 
     @Step("prefer shipping")
-    public void PreferShipping(String text) {
+    public void preferShipping(String text) {
         List<WebElement> shipping = ShippingBtn;
         for (WebElement ShippingBtn : shipping) {
             if (getText(ShippingBtn).contains(text)) {
@@ -125,7 +125,7 @@ public class ShoppingOrderFormPage extends MenuPage {
     }
 
     @Step("Choose your exact address")
-    public void ShippingAddress(String[] address) {
+    public void shippingAddress(String[] address) {
         fillText(StreetAddressField, address[0]);
         sleep(2000);
         fillText(PostalCodeField, address[1]);
@@ -151,13 +151,13 @@ public class ShoppingOrderFormPage extends MenuPage {
     @Step("fill order form")
     public void fillOrderForm(String styleName, String size, String fName, String lName, String email, String[] address,
                               String shippingMethod) {
-        StyleYourWay();
-        PickYourFavoriteLook(styleName);
-        YourSize(size);
-        FirstName(fName);
-        LastNameAndEmail(lName, email);
-        PreferShipping(shippingMethod);
-        ShippingAddress(address);
+        styleYourWay();
+        pickYourFavoriteLook(styleName);
+        yourSize(size);
+        firstName(fName);
+        lastNameAndEmail(lName, email);
+        preferShipping(shippingMethod);
+        shippingAddress(address);
         sleep(1000);
 
     }

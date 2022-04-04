@@ -53,12 +53,12 @@ public class ChooseASubscriptionThatSuitsYou extends MenuPage {
     }
 
     @Step("Choose Suitable Subscription")
-    public String GetChooseSuitableSubscription() {
+    public String getChooseSuitableSubscription() {
         return getText(suitableSubscription);
     }
 
     @Step("Choose Type Upgrade")
-    public String GetChooseTypeUpgrade() {
+    public String getChooseTypeUpgrade() {
         wait.until(ExpectedConditions.visibilityOf(typeMonthly));
         return getText(typeMonthly);
     }

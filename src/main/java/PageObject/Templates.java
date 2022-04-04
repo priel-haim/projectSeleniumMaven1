@@ -36,7 +36,7 @@ public class Templates extends MenuPage {
     }
 
     @Step("choosing the template")
-    public void ChooseTemplate(String name) {
+    public void chooseTemplate(String name) {
         for (WebElement buttonIndex : ListBtn) {
             buttonIndex.click();
             for (WebElement item : AllTemplatesList) {
@@ -53,22 +53,22 @@ public class Templates extends MenuPage {
     }
 
     @Step("to upgrade")
-    public void Upgrade() {
+    public void upgrade() {
         click(UpgradeBtn);
     }
 
     @Step("Get shopping order form")
-    public String GetShoppingOrderForm() {
+    public String getShoppingOrderForm() {
         return getText(ShoppingOrderForm);
     }
 
     @Step("Get technology quiz")
-    public String GetTechnologyQuiz() {
+    public String getTechnologyQuiz() {
         return getText(TechnologyQuiz);
     }
 
     @Step("Get Custom Shirt Configurator")
-    public String GetCustomShirtConfigurator(){
+    public String getCustomShirtConfigurator(){
         return getText(CustomShirtConfigurator);
     }
 

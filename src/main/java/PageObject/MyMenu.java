@@ -30,7 +30,7 @@ public class MyMenu extends MenuPage {
     }
 
     @Step("Button and selection in the My Username menu")
-    public void UserMenu(String name) {
+    public void userMenu(String name) {
         click(yourAccountField);
         sleep(2000);
         List<WebElement> list = MenuList;
@@ -44,7 +44,7 @@ public class MyMenu extends MenuPage {
     }
 
     @Step("you forget you password ")
-    public void ForgetPassword(String Email) {
+    public void forgetPassword(String Email) {
         click(forgetBtn);
         sleep(1000);
         fillText(forgetPasswordField, Email); // forget your password
@@ -53,7 +53,7 @@ public class MyMenu extends MenuPage {
     }
 
     @Step("my template")
-    public String GetMyTemplate(){
+    public String getMyTemplate(){
         return getText(GetmyTemplate);
     }
 }

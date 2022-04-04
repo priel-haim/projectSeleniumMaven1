@@ -66,12 +66,12 @@ public class CustomShirtConfiguratorPage extends MenuPage {
     }
 
     @Step("create your shirt")
-    public void CreateYourShirt() {
+    public void createYourShirt() {
         click(StartBtn);
     }
 
     @Step("You need to choose the right fabric")
-    public void ChooseFabric(String fabric) {
+    public void chooseFabric(String fabric) {
         sleep(200);
         List<WebElement> MyColor = ChooseTheColorBtn;
         for (WebElement ChooseTheColorBtn : MyColor) {
@@ -85,7 +85,7 @@ public class CustomShirtConfiguratorPage extends MenuPage {
     }
 
     @Step("What sleeve do you want?")
-    public void ChooseTheSleeve(String name) {
+    public void chooseTheSleeve(String name) {
         sleep(800);
         List<WebElement> sleeve = ClickOnRightSleeveBtn;
         for (WebElement ClickOnRightSleeveBtn : sleeve) {
@@ -99,7 +99,7 @@ public class CustomShirtConfiguratorPage extends MenuPage {
     }
 
     @Step("choose the cuff you want")
-    public void ChooseTheCuff(String name) {
+    public void chooseTheCuff(String name) {
         sleep(2000);
         List<WebElement> cuff = ClickYouCuffBtn;
         for (WebElement ClickYouCuffBtn : cuff) {
@@ -113,7 +113,7 @@ public class CustomShirtConfiguratorPage extends MenuPage {
     }
 
     @Step("Choose what suits you")
-    public void ChooseTheFitting(String type) {
+    public void chooseTheFitting(String type) {
         sleep(2000);
         List<WebElement> BackOfTheShirt = ChooseYourGeyserBtn;
         for (WebElement ChooseYourGeyserBtn : BackOfTheShirt) {
@@ -127,7 +127,7 @@ public class CustomShirtConfiguratorPage extends MenuPage {
     }
 
     @Step("choose your collar")
-    public void ChooseTheCollar(String type) {
+    public void chooseTheCollar(String type) {
         sleep(2000);
         List<WebElement> Collar = ChooseYourChooseBtn;
         for (WebElement ChooseYourChooseBtn : Collar) {
@@ -140,7 +140,7 @@ public class CustomShirtConfiguratorPage extends MenuPage {
     }
 
     @Step("what the a size of your Shirt?")
-    public void TheSizeOfTheShirt(String size) {
+    public void theSizeOfTheShirt(String size) {
         click(SearchButtonBtn);
         sleep(2000);
         List<WebElement> mySize = mySizeBtn;
@@ -156,13 +156,13 @@ public class CustomShirtConfiguratorPage extends MenuPage {
 
     @Step("choose your italian shirt")
     public void italianShirt(String[] type) {
-        CreateYourShirt();
-        ChooseFabric(type[0]);
-        ChooseTheSleeve(type[1]);
-        ChooseTheCuff(type[2]);
-        ChooseTheFitting(type[3]);
-        ChooseTheCollar(type[4]);
-        TheSizeOfTheShirt(type[5]);
+        createYourShirt();
+        chooseFabric(type[0]);
+        chooseTheSleeve(type[1]);
+        chooseTheCuff(type[2]);
+        chooseTheFitting(type[3]);
+        chooseTheCollar(type[4]);
+        theSizeOfTheShirt(type[5]);
     }
 
     @Step("your ShirtIs Ready")

@@ -38,13 +38,13 @@ public class LoginPage extends MenuPage {
     }
 
     @Step("open your user name")
-    public void OpenLogin() {
+    public void openLogin() {
         click(OpenLoginUpBtn);
         sleep(1000);
     }
 
     @Step("login to the site")
-    public void LoginToTheSite(String username, String Password) {
+    public void loginToTheSite(String username, String Password) {
         sleep(200);
         fillText(usernameField, username);
         fillText(passwordField, Password);
@@ -54,7 +54,7 @@ public class LoginPage extends MenuPage {
     }
 
     @Step("show me error message")
-    public void LoginToErrorMessage(String username, String Password) {
+    public void loginToErrorMessage(String username, String Password) {
         sleep(200);
         fillText(usernameField, username);
         fillText(passwordField, Password);
@@ -64,12 +64,12 @@ public class LoginPage extends MenuPage {
     }
 
     @Step("Show me an error message")
-    public String GetErrorMessage() {
+    public String getErrorMessage() {
         return getText(errorMessage);
     }
 
     @Step("Confirm my login")
-    public String GetMyLogin() {
+    public String getMyLogin() {
         return getText(MyLogin);
     }
 }

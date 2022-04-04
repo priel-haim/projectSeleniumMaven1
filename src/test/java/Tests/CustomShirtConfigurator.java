@@ -11,41 +11,41 @@ public class CustomShirtConfigurator extends BaseTest {
 	private String yourShirt = "Your custom shirt is almost ready";
 
 	@Test(description = "Sign in with my name details")
-	public void tc01_OpenLogin() {
+	public void tc01_openLogin() {
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.OpenLogin();
-		loginPage.LoginToTheSite("prili2@walla.com", "Haim-Haim");
+		loginPage.openLogin();
+		loginPage.loginToTheSite("prili2@walla.com", "Haim-Haim");
 		String expected = "Haim-a";
-        String actual = loginPage.GetMyLogin();
+        String actual = loginPage.getMyLogin();
 		Assert.assertEquals("Haim-a", expected);
 	}
 
 	@Test(description = "Click on START")
-	public void tc02_StartToProject() {
+	public void tc02_startToProject() {
 		ChooseProjectType projectType = new ChooseProjectType(driver);
-		projectType.ChooseFromListMain("Templates");
+		projectType.chooseFromListMain("Templates");
 		MyMenu menu = new MyMenu(driver);
-		String myMenu = menu.GetMyTemplate();
+		String myMenu = menu.getMyTemplate();
 		Assert.assertEquals("Templates", myMenu);
 	}
 
 	@Test(description = "Choose my project type")
-	public void tc03_OpeningPaymentFormPage() {
+	public void tc03_openingPaymentFormPage() {
 		ChooseProjectType choosePro = new ChooseProjectType(driver);
-		choosePro.ChooseProject("Payment Form");
-		Assert.assertEquals("Payment form", choosePro.PaymentFormTypeProject());
+		choosePro.chooseProject("Payment Form");
+		Assert.assertEquals("Payment form", choosePro.paymentFormTypeProject());
 	}
 
 	@Test(description = "Choose my projact")
-	public void tc04_ChooseYourShirtPage() {
+	public void tc04_chooseYourShirtPage() {
 		Templates template = new Templates(driver);
-		template.ChooseTemplate("Custom Shirt Configurator");
-		String shirt = template.GetCustomShirtConfigurator();
+		template.chooseTemplate("Custom Shirt Configurator");
+		String shirt = template.getCustomShirtConfigurator();
 		Assert.assertEquals(shirt, "The Italian shirt \nmade for you");
 	}
 
 	@Test(description = "Dimensions of the garment")
-	public void tc05_ShirtDimensionsPage() {
+	public void tc05_shirtDimensionsPage() {
 		CustomShirtConfiguratorPage Shirt = new CustomShirtConfiguratorPage(driver);
 		Shirt.italianShirt(ItalianShirt);
 		Assert.assertTrue(Shirt.yourShirtIsReady().contains(yourShirt));

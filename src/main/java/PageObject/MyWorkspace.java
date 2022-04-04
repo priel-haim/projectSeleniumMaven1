@@ -26,18 +26,18 @@ public class MyWorkspace extends MenuPage {
         super(driver);
     }
 
-    @Step("start your project")
-    public void StartProject() {
-        click(StartBtn);
-    }
+//    @Step("start your project")
+//    public void StartProject() {
+//        click(StartBtn);
+//    }
 
     @Step("click to upgrade")
-    public void ClickUpgrade() {
+    public void clickUpgrade() {
         click(UpgradeBtn);
     }
 
     @Step("get upgrade")
-    public String GetUpgrade() {
+    public String getUpgrade() {
         return getText(Upgrade);
     }
 }

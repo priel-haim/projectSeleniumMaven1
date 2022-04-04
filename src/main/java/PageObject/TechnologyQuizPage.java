@@ -38,7 +38,7 @@ public class TechnologyQuizPage extends MenuPage {
     }
 
     @Step("who founded apple computer?")
-    public void WhoFoundedAppleComputer(String name) {
+    public void whoFoundedAppleComputer(String name) {
         List<WebElement> computer = Round1List;
         for (WebElement Round1List : computer) {
             if (getText(Round1List).contains(name)) {
@@ -53,7 +53,7 @@ public class TechnologyQuizPage extends MenuPage {
     }
 
     @Step("What shortcuts are there in the operating system?")
-    public void WhatShortcutsTheOperatingSystem(String name) {
+    public void whatShortcutsTheOperatingSystem(String name) {
         List<WebElement> OS = Round2List;
         for (WebElement Round2List : OS) {
             if (getText(Round2List).contains(name)) {
@@ -68,7 +68,7 @@ public class TechnologyQuizPage extends MenuPage {
     }
 
     @Step("how many computers languages use?")
-    public void HowManyComputersLanguagesUse(String number) {
+    public void howManyComputersLanguagesUse(String number) {
         List<WebElement> LanguagesAreInUse = Round3List;
         for (WebElement Round3List : LanguagesAreInUse) {
             if (getText(Round3List).contains(number)) {
@@ -83,7 +83,7 @@ public class TechnologyQuizPage extends MenuPage {
     }
 
     @Step("What does the acronym WWW mean?")
-    public void WhatDoesWWWMean(String name) {
+    public void whatDoesWWWMean(String name) {
         List<WebElement> Acronyms = Round4List;
         for (WebElement Round4List : Acronyms) {
             if (getText(Round4List).contains(name)) {
@@ -98,7 +98,7 @@ public class TechnologyQuizPage extends MenuPage {
     }
 
     @Step("where to put the MOV Extension?")
-    public void WhereToPutTheMOVExtension(String name) {
+    public void whereToPutTheMOVExtension(String name) {
         List<WebElement> MOV = Round5List;
         for (WebElement Round5List : MOV) {
             if (getText(Round5List).contains(name)) {
@@ -113,12 +113,12 @@ public class TechnologyQuizPage extends MenuPage {
     }
 
     @Step("answering the questions")
-    public void AnsweringTheQuestions(String inventor, String Shortcut, String number, String Meaning, String Name) {
-        WhoFoundedAppleComputer(inventor);
-        WhatShortcutsTheOperatingSystem(Shortcut);
-        HowManyComputersLanguagesUse(number);
-        WhatDoesWWWMean(Meaning);
-        WhereToPutTheMOVExtension(Name);
+    public void answeringTheQuestions(String inventor, String Shortcut, String number, String Meaning, String Name) {
+        whoFoundedAppleComputer(inventor);
+        whatShortcutsTheOperatingSystem(Shortcut);
+        howManyComputersLanguagesUse(number);
+        whatDoesWWWMean(Meaning);
+        whereToPutTheMOVExtension(Name);
         sleep(1000);
     }
 

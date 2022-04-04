@@ -17,8 +17,8 @@ public class ShoppingOrderForm extends BaseTest {
 	@Test(description = "Sign in with my name details")
 	public void tc01_openLogin() {
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.OpenLogin();
-		loginPage.LoginToTheSite("prili2@walla.com", "Haim-Haim");
+		loginPage.openLogin();
+		loginPage.loginToTheSite("prili2@walla.com", "Haim-Haim");
 		// compares between the account name and what is expected
 		String expected = "Haim-a";
 //        String actual = loginPage.GetMyLogin();
@@ -28,24 +28,24 @@ public class ShoppingOrderForm extends BaseTest {
 	@Test(description = "Select a title from the main menu")
 	public void tc02_startToProject() {
 		ChooseProjectType projectType = new ChooseProjectType(driver);
-		projectType.ChooseFromListMain("Templates");
+		projectType.chooseFromListMain("Templates");
 		MyMenu menu = new MyMenu(driver);
-		String myMenu = menu.GetMyTemplate();
+		String myMenu = menu.getMyTemplate();
 		Assert.assertEquals("Templates", myMenu);
 	}
 
 	@Test(description = "Select the template type")
 	public void tc03_openingPaymentFormPage() {
 		ChooseProjectType choosePro = new ChooseProjectType(driver);
-		choosePro.ChooseProject("Payment form");
-		Assert.assertEquals("Payment form", choosePro.PaymentFormTypeProject());
+		choosePro.chooseProject("Payment form");
+		Assert.assertEquals("Payment form", choosePro.paymentFormTypeProject());
 	}
 
 	@Test(description = "my type project")
 	public void tc04_chooseTypeProject() {
 		Templates template = new Templates(driver);
-		template.ChooseTemplate("Shopping Order Form");
-		String Shopping = template.GetShoppingOrderForm();
+		template.chooseTemplate("Shopping Order Form");
+		String Shopping = template.getShoppingOrderForm();
 		Assert.assertEquals(Shopping, "Style,\nyour way.");
 	}
 

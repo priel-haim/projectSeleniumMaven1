@@ -9,19 +9,19 @@ import org.testng.annotations.Test;
 public class TestUserAndPassword extends BaseTest{
 
 	@Test(description = "Test the login failed scenario - check that login failed, and you get the right message")
-	public void tc01_OpenLogin() {
+	public void tc01_openLogin() {
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.OpenLogin();
-		loginPage.LoginToErrorMessage("phaim7485a@gmail.com", "Praim35");
-		String login=loginPage.GetErrorMessage();
+		loginPage.openLogin();
+		loginPage.loginToErrorMessage("phaim7485a@gmail.com", "Praim35");
+		String login=loginPage.getErrorMessage();
 		Assert.assertEquals(login, "These credentials do not match our records.");
 	}
 
 	@Test(dataProvider ="getData", description="use incorrect login information")
-	public void tc02_OpenLogin2(String username, String password) {
+	public void tc02_openLogin2(String username, String password) {
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.LoginToErrorMessage(username, password);
-		String actual=loginPage.GetErrorMessage();
+		loginPage.loginToErrorMessage(username, password);
+		String actual=loginPage.getErrorMessage();
 		String expected="These credentials do not match our records.";
 		Assert.assertEquals(actual, expected);
 	}

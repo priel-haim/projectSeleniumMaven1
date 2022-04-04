@@ -26,7 +26,7 @@ public class ChooseProjectType extends MenuPage {
     }
 
     @Step("Make-up to choose from the menu list")
-    public void ChooseFromListMain(String name){
+    public void chooseFromListMain(String name){
         List<WebElement> list = ListMain;
         for (WebElement ListMain : list) {
             if(getText(ListMain).contains(name)){
@@ -37,7 +37,7 @@ public class ChooseProjectType extends MenuPage {
     }
 
     @Step("choosing template type")
-    public void ChooseProject(String name) {
+    public void chooseProject(String name) {
         List<WebElement> list = TemplateTitleType;
         for (WebElement TemplateTitleType : list) {
             if (getText(TemplateTitleType).equalsIgnoreCase(name)) {
@@ -50,12 +50,12 @@ public class ChooseProjectType extends MenuPage {
     }
 
     @Step("The type of project is a quiz")
-    public String QuizTypeProject() {
+    public String quizTypeProject() {
         return getText(Quiz);
     }
 
     @Step("The type of project is a Payment Form")
-    public String PaymentFormTypeProject() {
+    public String paymentFormTypeProject() {
         return getText(PaymentForm);
     }
 }
