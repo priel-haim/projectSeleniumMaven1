@@ -16,7 +16,7 @@ public class ChooseASubscriptionThatSuitsYou extends MenuPage {
     WebElement MonthlyOrYearlyBtn;
 
     // The Upgrade Price
-    @FindBy(css = "#pills-monthly a>button")
+    @FindBy(css = "#pills-monthly button")
     List<WebElement> TheUpgradePriceBtn;
 
     // choose suitable Subscription
@@ -24,7 +24,7 @@ public class ChooseASubscriptionThatSuitsYou extends MenuPage {
     WebElement suitableSubscription;
 
     // for assert
-    @FindBy(css = "#pills-monthly div:nth-child(3) a>button")
+    @FindBy(css = "#pills-monthly div:nth-child(3) a button")
     WebElement typeMonthly;
 
     public ChooseASubscriptionThatSuitsYou(WebDriver driver) {
@@ -42,7 +42,7 @@ public class ChooseASubscriptionThatSuitsYou extends MenuPage {
         List<WebElement> list = TheUpgradePriceBtn;
         for (WebElement TheUpgradePriceBtn : list) {
             if (getText(TheUpgradePriceBtn).contains(upgrade)) {
-                sleep(500);
+                sleep(1500);
                 AllureAttachment.attachElementScreenshot(TheUpgradePriceBtn);
                 click(TheUpgradePriceBtn);
                 break;

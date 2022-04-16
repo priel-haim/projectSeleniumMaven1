@@ -4,6 +4,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.AllureAttachment;
 
 public class YouAreAlmostOnStarter extends MenuPage {
 
@@ -21,6 +22,9 @@ public class YouAreAlmostOnStarter extends MenuPage {
     WebElement SecurityNumbersField;
     @FindBy(css = "label>#coupon")
     WebElement CouponField;
+    // for allure
+    @FindBy(css = ".form-row.mb-3")
+    WebElement allPaymentDetails;
 
     // Your Billing Details
     @FindBy(css = "#first_name")
@@ -43,6 +47,9 @@ public class YouAreAlmostOnStarter extends MenuPage {
     WebElement cityField;
     @FindBy(css = "label #country")
     WebElement countryList;
+    // for allure
+    @FindBy(css = ".col-sm-12>div>div:nth-child(1)")
+    WebElement allBillingDetails;
 
     // I agree to the involve.me
     @FindBy(css = "span>label")
@@ -67,6 +74,8 @@ public class YouAreAlmostOnStarter extends MenuPage {
         //  move back from frame
         driver.switchTo().defaultContent();
         fillText(CouponField, Coupon);
+        sleep(1000);
+        AllureAttachment.attachElementScreenshot(allPaymentDetails);
     }
 
     @Step("your billing details")
@@ -81,6 +90,8 @@ public class YouAreAlmostOnStarter extends MenuPage {
         fillText(ZIPCodeField, ZIPCode);
         fillText(cityField, city);
         selectByValue(countryList, country);
+        sleep(1000);
+        AllureAttachment.attachElementScreenshot(allBillingDetails);
     }
 
     @Step("your order summary")
