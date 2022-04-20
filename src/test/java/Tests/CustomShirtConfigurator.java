@@ -36,7 +36,7 @@ public class CustomShirtConfigurator extends BaseTest {
 		Assert.assertEquals("Payment form", choosePro.paymentFormTypeProject());
 	}
 
-	@Test(description = "Choose my projact")
+	@Test(description = "Choose my project")
 	public void tc04_chooseYourShirtPage() {
 		Templates template = new Templates(driver);
 		template.chooseTemplate("Custom Shirt Configurator");

@@ -11,25 +11,23 @@ import java.util.List;
 public class Templates extends MenuPage {
 
     @FindBy(css = ".lg\\:col-span-8>div:nth-child(2)>div>div")
-    List<WebElement> AllTemplatesList;
+    private List<WebElement> AllTemplatesList;
     @FindBy(css = "div.hidden.sm\\:flex.sm\\:items-center.sm\\:justify-between.m-auto>nav>div")
-    List<WebElement> ListBtn;
-    //    @FindBy(css = " .m-auto nav  .rounded-r-md svg")
-//    WebElement pagination;
+    private List<WebElement> ListBtn;
     @FindBy(css = "div>div.relative>div>a:nth-child(1)")
-    WebElement Preview;
+    private WebElement Preview;
 
     // Upgrade
     @FindBy(css = ".nav-link.upgrade")
-    WebElement UpgradeBtn;
+    private WebElement UpgradeBtn;
 
     // for assert
     @FindBy(css = ".standalone-project-main.vcentered.left-left .c-headline-container.content-item .e-headline.is-shrinkable > div > span")
-    WebElement ShoppingOrderForm;
+    private WebElement ShoppingOrderForm;
     @FindBy(css = ".content-item .e-headline.is-shrinkable span")
-    WebElement TechnologyQuiz;
+    private WebElement TechnologyQuiz;
     @FindBy(css = ".e-headline.is-shrinkable span")
-    WebElement CustomShirtConfigurator;
+    private WebElement CustomShirtConfigurator;
 
     public Templates(WebDriver driver) {
         super(driver);

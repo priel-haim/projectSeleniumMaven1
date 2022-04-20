@@ -10,27 +10,27 @@ public class LoginPage extends MenuPage {
 
     // open my login
     @FindBy(css = ".other-link.login")
-    WebElement OpenLoginUpBtn;
+    private WebElement OpenLoginUpBtn;
 
     // Write down the correct username
     @FindBy(css = "[autocomplete='username']")
-    WebElement usernameField;
+    private WebElement usernameField;
 
     // Write down the correct password
     @FindBy(css = "[name='password']")
-    WebElement passwordField;
+    private WebElement passwordField;
 
     // push the button to open my user
     @FindBy(css = ".btn-primary")
-    WebElement loginBtn;
+    private WebElement loginBtn;
 
     // error message
     @FindBy(css = ".alert-danger")
-    WebElement errorMessage;
+    private WebElement errorMessage;
     @FindBy(css = "#nav-dropdown .flex")
-    WebElement MyLogin;
+    private WebElement MyLogin;
     @FindBy(css = ".auth-panel")
-    WebElement finalErrorMessage;
+    private WebElement finalErrorMessage;
 
 
     public LoginPage(WebDriver driver) {

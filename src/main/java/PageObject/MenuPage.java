@@ -9,11 +9,11 @@ public class MenuPage extends BasePage {
 
 	// Close the Project
 	@FindBy(css = ".float-right>img")
-	WebElement closeProjectBtn;
+	private WebElement closeProjectBtn;
 	// for assert
 	// Button for closing the project
 	@FindBy(css = ".e-close img")
-	WebElement close;
+	private WebElement close;
 
 	public MenuPage(WebDriver driver) {
 		super(driver);

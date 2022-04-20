@@ -11,15 +11,15 @@ public class ChooseProjectType extends MenuPage {
 
     //choose project
     @FindBy(css = "#app .flex>div:nth-child(3) div>a")
-    List<WebElement> ListMain;
+    private List<WebElement> ListMain;
     @FindBy(css = "div:nth-child(1)>.divide-gray-100 .text-gray-700")
-    List<WebElement> TemplateTitleType;
+    private List<WebElement> TemplateTitleType;
 
     //for assert
     @FindBy(css = "div:nth-child(1)>div>div:nth-child(1)>button>div.text-gray-700")
-    WebElement Quiz;
+    private WebElement Quiz;
     @FindBy(css = "div:nth-child(1)>div>div:nth-child(3)>button>div.text-gray-700")
-    WebElement PaymentForm;
+    private WebElement PaymentForm;
 
     public ChooseProjectType(WebDriver driver) {
         super(driver);

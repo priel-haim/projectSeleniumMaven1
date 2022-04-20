@@ -11,21 +11,21 @@ import java.util.List;
 public class TechnologyQuizPage extends MenuPage {
 
     @FindBy(css = ".c-button.btn")
-    WebElement StartBtn;
+    private WebElement StartBtn;
     @FindBy(css = ".v-grid-1 button>div>div")
-    List<WebElement> Round1List;
+    private List<WebElement> Round1List;
     @FindBy(css = ".v-grid-1 button>div>div")
-    List<WebElement> Round2List;
+    private List<WebElement> Round2List;
     @FindBy(css = ".v-grid-1 button>div>div")
-    List<WebElement> Round3List;
+    private List<WebElement> Round3List;
     @FindBy(css = ".v-grid-1 button>div>div")
-    List<WebElement> Round4List;
+    private List<WebElement> Round4List;
     @FindBy(css = ".v-grid-1 button>div>div")
-    List<WebElement> Round5List;
+    private List<WebElement> Round5List;
     @FindBy(css = ".c-button.btn")
-    WebElement NextBtn;
+    private WebElement NextBtn;
     @FindBy(css = ".e-headline span")
-    WebElement YourFinalScore;
+    private WebElement YourFinalScore;
 
     public TechnologyQuizPage(WebDriver driver) {
         super(driver);

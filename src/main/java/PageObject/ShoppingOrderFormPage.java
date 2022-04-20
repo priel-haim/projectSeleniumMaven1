@@ -11,53 +11,53 @@ public class ShoppingOrderFormPage extends MenuPage {
 
     // Open The Store
     @FindBy(css = ".c-button.btn")
-    WebElement ShopNowBtn;
+    private WebElement ShopNowBtn;
 
     // Pick your favorite look
     @FindBy(css = "[style='font-size: 14px;']")
-    List<WebElement> StyleBtns;
+    private List<WebElement> StyleBtns;
 
     // What's your size?
     @FindBy(css = ".el-select__caret.el-input__icon")
-    WebElement OpenYourSizeBtn;
+    private WebElement OpenYourSizeBtn;
     @FindBy(css = "div ul>.el-select-dropdown__item span")
-    List<WebElement> YourSizeList;
+    private List<WebElement> YourSizeList;
 
     // What's your first name?
     @FindBy(css = "[placeholder='First Name*']")
-    WebElement FnameField;
+    private WebElement FnameField;
 
     // what's your last name & email?
     @FindBy(css = ".is-shrinkable>div>span")
-    WebElement LastNameAndEmail;
+    private WebElement LastNameAndEmail;
     @FindBy(css = "[placeholder='Last Name']")
-    WebElement LnameField;
+    private WebElement LnameField;
     @FindBy(css = "[placeholder='Email*']")
-    WebElement EmailField;
+    private WebElement EmailField;
     @FindBy(css = ".c-button.btn")
-    WebElement ContinueBtn;
+    private WebElement ContinueBtn;
 
     // which shipping method would you prefer?
     @FindBy(css = ".btn-secondary")
-    List<WebElement> ShippingBtn;
+    private List<WebElement> ShippingBtn;
 
     // where should we ship your attire?
     @FindBy(css = "[placeholder='Street address*']")
-    WebElement StreetAddressField;
+    private WebElement StreetAddressField;
     @FindBy(css = ".zipCode-label>input")
-    WebElement PostalCodeField;
+    private WebElement PostalCodeField;
     @FindBy(css = "[placeholder='City*']")
-    WebElement CityField;
+    private WebElement CityField;
     @FindBy(css = "[placeholder='State*']")
-    WebElement StateField;
+    private WebElement StateField;
     @FindBy(css = ".el-input__icon.el-icon-arrow-up")
-    WebElement SelectCountryBtn;
+    private WebElement SelectCountryBtn;
 
     // Search My Country
     @FindBy(css = ".el-select-dropdown__wrap>ul>li span")
-    List<WebElement> MyCountryList;
+    private List<WebElement> MyCountryList;
     @FindBy(css = ".e-headline span")
-    WebElement finalTile;
+    private WebElement finalTile;
 
     public ShoppingOrderFormPage(WebDriver driver) {
         super(driver);

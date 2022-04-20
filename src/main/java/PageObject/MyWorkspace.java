@@ -11,16 +11,13 @@ import java.util.List;
 public class MyWorkspace extends MenuPage {
 
     @FindBy(css = ".list-none a")
-    WebElement GetUpgrade;
+    private WebElement GetUpgrade;
     @FindBy(css = ".text-sm.flex.items-start>a")
-    List<WebElement> MenuList;
+    private List<WebElement> MenuList;
 
     // for Assert
     @FindBy(css = ".upgrade")
-    WebElement Upgrade;
-//    @FindBy(css = ".rounded.bg-teal-500")
-//    WebElement start;
-
+    private WebElement Upgrade;
 
     public MyWorkspace(WebDriver driver) {
         super(driver);

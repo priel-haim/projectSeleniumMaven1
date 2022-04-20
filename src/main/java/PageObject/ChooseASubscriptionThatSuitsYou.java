@@ -13,19 +13,19 @@ public class ChooseASubscriptionThatSuitsYou extends MenuPage {
 
     // button to change to month or year
     @FindBy(css = "#pills-monthly-tab")
-    WebElement MonthlyOrYearlyBtn;
+    private WebElement MonthlyOrYearlyBtn;
 
     // The Upgrade Price
     @FindBy(css = "#pills-monthly button")
-    List<WebElement> TheUpgradePriceBtn;
+    private List<WebElement> TheUpgradePriceBtn;
 
     // choose suitable Subscription
     @FindBy(css = ".e-title")
-    WebElement suitableSubscription;
+    private WebElement suitableSubscription;
 
     // for assert
     @FindBy(css = "#pills-monthly div:nth-child(3) a button")
-    WebElement typeMonthly;
+    private WebElement typeMonthly;
 
     public ChooseASubscriptionThatSuitsYou(WebDriver driver) {
         super(driver);

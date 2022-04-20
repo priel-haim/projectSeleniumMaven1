@@ -10,19 +10,19 @@ import java.util.List;
 public class MyMenu extends MenuPage {
 
     @FindBy(css = "#nav-dropdown [focusable='false']") //.fas.fa-caret-down.ml-2
-    WebElement yourAccountField;
+    private WebElement yourAccountField;
     @FindBy(css = "div>.darken")
-    WebElement forgetBtn;
+    private WebElement forgetBtn;
     @FindBy(css = "[autocomplete='username']")
-    WebElement forgetPasswordField;
+    private WebElement forgetPasswordField;
     @FindBy(css = ".btn.btn-primary")
-    WebElement messageEmailBtn;
+    private WebElement messageEmailBtn;
     @FindBy(css = ".nav-item.dropdown")
-    WebElement OpenMenulist;
+    private WebElement OpenMenulist;
     @FindBy(css = ".md\\:items-center .items-center div ul li")
-    List<WebElement> MenuList;
+    private List<WebElement> MenuList;
     @FindBy(css = ".items-center.text-sm>a:nth-child(2)")
-    WebElement GetmyTemplate;
+    private WebElement GetmyTemplate;
 
 
     public MyMenu(WebDriver driver) {
