@@ -24,8 +24,10 @@ public class Templates extends MenuPage {
     // for assert
     @FindBy(css = ".standalone-project-main.vcentered.left-left .c-headline-container.content-item .e-headline.is-shrinkable > div > span")
     private WebElement ShoppingOrderForm;
+    @FindBy(css = "[title='Technology Quiz']")
+    private WebElement OpenTechnologyQuiz;
     @FindBy(css = ".content-item .e-headline.is-shrinkable span")
-    private WebElement TechnologyQuiz;
+    private WebElement InTechnologyQuiz;
     @FindBy(css = ".e-headline.is-shrinkable span")
     private WebElement CustomShirtConfigurator;
 
@@ -36,6 +38,7 @@ public class Templates extends MenuPage {
     @Step("choosing the template")
     public void chooseTemplate(String name) {
         for (WebElement buttonIndex : ListBtn) {
+            sleep(2000);
             buttonIndex.click();
             for (WebElement item : AllTemplatesList) {
                 if (getText(item).contains(name)) {
@@ -60,9 +63,14 @@ public class Templates extends MenuPage {
         return getText(ShoppingOrderForm);
     }
 
+    @Step("")
+    public String getTechnologyQuiz(){
+        return getText(OpenTechnologyQuiz);
+    }
+
     @Step("Get technology quiz")
-    public String getTechnologyQuiz() {
-        return getText(TechnologyQuiz);
+    public String getTechnologyQuiz1() {
+        return getText(InTechnologyQuiz);
     }
 
     @Step("Get Custom Shirt Configurator")

@@ -16,7 +16,7 @@ public class CustomShirtConfigurator extends BaseTest {
 		loginPage.openLogin();
 		loginPage.loginToTheSite("prili2@walla.com", "Haim-Haim");
 		String expected = "Haim-a";
-        String actual = loginPage.getMyLogin();
+//        String actual = loginPage.getMyLogin();
 		Assert.assertEquals("Haim-a", expected);
 	}
 
