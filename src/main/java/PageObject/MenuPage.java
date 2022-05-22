@@ -21,6 +21,7 @@ public class MenuPage extends BasePage {
 
 	@Step("exit from the project")
 	public String exitTheProject() {
+		sleep(1000);
 		return getText(closeProjectBtn);
 
 	}

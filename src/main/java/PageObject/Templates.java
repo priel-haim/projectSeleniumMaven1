@@ -28,7 +28,7 @@ public class Templates extends MenuPage {
     private WebElement OpenTechnologyQuiz;
     @FindBy(css = ".content-item .e-headline.is-shrinkable span")
     private WebElement InTechnologyQuiz;
-    @FindBy(css = ".e-headline.is-shrinkable span")
+    @FindBy(css = ".e-headline.is-shrinkable span") // [title='Custom Shirt Configurator']
     private WebElement CustomShirtConfigurator;
 
     public Templates(WebDriver driver) {

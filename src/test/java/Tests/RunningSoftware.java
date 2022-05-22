@@ -40,7 +40,7 @@ public class RunningSoftware extends BaseTest {
 	public void tc04_chooseTemplateOfQuiz() {
 		Templates templates = new Templates(driver);
 		templates.chooseTemplate("Technology Quiz");
-		String typeTemplate = templates.getTechnologyQuiz();
+		String typeTemplate = templates.getTechnologyQuiz1();
 		Assert.assertEquals(typeTemplate, "How well do you know tech?");
 	}
 
@@ -51,7 +51,6 @@ public class RunningSoftware extends BaseTest {
 		technology.answeringTheQuestions("Steve Jobs", "Operating System", "2000", "World Wide Web",
 				"Animation/video file");
 		Assert.assertTrue(technology.getTitle().contains(YourFinalScore));
-
 	}
 
 	@Test(description = "Back to Template")

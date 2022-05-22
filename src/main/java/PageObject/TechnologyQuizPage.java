@@ -34,6 +34,7 @@ public class TechnologyQuizPage extends MenuPage {
 
     @Step("To open the technological quiz")
     public void OpenTechnologyQuiz() {
+        sleep(1000);
         click(StartBtn);
     }
 
