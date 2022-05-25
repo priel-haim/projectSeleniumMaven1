@@ -51,11 +51,11 @@ public class ChooseASubscriptionThatSuitsYou extends MenuPage {
         }
         sleep(2000);
     }
-
-    @Step("Choose Suitable Subscription")
-    public String getChooseSuitableSubscription() {
-        return getText(suitableSubscription);
-    }
+//
+//    @Step("Choose Suitable Subscription")
+//    public String getChooseSuitableSubscription() {
+//        return getText(suitableSubscription);
+//    }
 
     @Step("Choose Type Upgrade")
     public String getChooseTypeUpgrade() {

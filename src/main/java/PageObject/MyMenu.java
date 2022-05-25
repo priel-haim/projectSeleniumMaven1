@@ -13,8 +13,12 @@ public class MyMenu extends MenuPage {
     private WebElement yourAccountField;
     @FindBy(css = "div>.darken")
     private WebElement forgetBtn;
+
+    // forget your password
     @FindBy(css = "[autocomplete='username']")
     private WebElement forgetPasswordField;
+
+    // message to Email
     @FindBy(css = ".btn.btn-primary")
     private WebElement messageEmailBtn;
     @FindBy(css = ".nav-item.dropdown")
@@ -47,9 +51,9 @@ public class MyMenu extends MenuPage {
     public void forgetPassword(String Email) {
         click(forgetBtn);
         sleep(1000);
-        fillText(forgetPasswordField, Email); // forget your password
+        fillText(forgetPasswordField, Email);
         sleep(2000);
-        click(messageEmailBtn); // message to Email
+        click(messageEmailBtn);
     }
 
     @Step("my template")
