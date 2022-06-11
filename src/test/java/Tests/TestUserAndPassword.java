@@ -11,6 +11,7 @@ public class TestUserAndPassword extends BaseTest{
 	@Test(description = "Test the login failed scenario - check that login failed, and you get the right message")
 	public void tc01_openLogin() {
 		LoginPage loginPage = new LoginPage(driver);
+		loginPage.cookies();
 		loginPage.openLogin();
 		loginPage.loginToErrorMessage("phaim7485a@gmail.com", "Praim35");
 		String login=loginPage.getErrorMessage();

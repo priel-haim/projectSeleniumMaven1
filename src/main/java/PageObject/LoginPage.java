@@ -7,6 +7,11 @@ import org.openqa.selenium.support.FindBy;
 import utilities.AllureAttachment;
 
 public class LoginPage extends MenuPage {
+    // close the cookie message
+    @FindBy(css = "div:nth-child(4)>label>span")
+    private WebElement Functionality;
+    @FindBy(css = "#cookiescript_buttons div:nth-child(1)")
+    private WebElement saveAndClose;
 
     // open my login
     @FindBy(css = ".other-link.login")
@@ -35,6 +40,13 @@ public class LoginPage extends MenuPage {
 
     public LoginPage(WebDriver driver) {
         super(driver);
+    }
+
+    @Step("close save-cookies window")
+    public void cookies() {
+        click(Functionality);
+        sleep(200);
+        click(saveAndClose);
     }
 
     @Step("open your user name")

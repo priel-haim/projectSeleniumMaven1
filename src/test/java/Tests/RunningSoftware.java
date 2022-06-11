@@ -11,6 +11,7 @@ public class RunningSoftware extends BaseTest {
 	@Test(description = "Open Login")
 	public void tc01_openLogin() {
 		LoginPage loginPage = new LoginPage(driver);
+		loginPage.cookies();
 		loginPage.openLogin();
 		loginPage.loginToTheSite("prili2@walla.com", "Haim-Haim");
 		// compares between the account name and what is expected

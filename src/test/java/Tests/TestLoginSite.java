@@ -11,6 +11,7 @@ public class TestLoginSite extends BaseTest {
 	@Test(description = " open my login")
 	public void tc01_loginSite() {
 		LoginPage loginPage = new LoginPage(driver);
+		loginPage.cookies();
 		loginPage.openLogin();
 		loginPage.loginToTheSite("prili2@walla.com", "Haim-Haim");
 		String expected = "Haim-a";

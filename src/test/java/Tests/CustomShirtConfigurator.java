@@ -13,6 +13,7 @@ public class CustomShirtConfigurator extends BaseTest {
 	@Test(description = "Sign in with my name details")
 	public void tc01_openLogin() {
 		LoginPage loginPage = new LoginPage(driver);
+		loginPage.cookies();
 		loginPage.openLogin();
 		loginPage.loginToTheSite("prili2@walla.com", "Haim-Haim");
 		String expected = "Haim-a";
